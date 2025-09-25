@@ -339,5 +339,83 @@ toastr.options = {
     "hideMethod": "fadeOut"
 };
 
+// Tiny Slider Initialization
+try {
+    var slider = function () {
+        // Configuración común para primer slider
+        const sliderConfig = {
+            items: 3,
+            controls: true,
+            mouseDrag: true,
+            loop: true,
+            rewind: false,
+            autoplay: true,
+            autoplayButtonOutput: false,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: false,
+            navPosition: "bottom",
+            controlsText: ['<i class="mdi mdi-chevron-left"></i>', '<i class="mdi mdi-chevron-right"></i>'],
+            nav: false,
+            speed: 800,
+            gutter: 12,
+            responsive: {
+                992: {
+                    items: 3
+                },
+                767: {
+                    items: 2
+                },
+                320: {
+                    items: 1
+                },
+            }
+        };
 
+        // Primer slider
+        if (document.getElementsByClassName('tiny-three-item').length > 0) {
+            var slider1 = tns({
+                container: '.tiny-three-item',
+                ...sliderConfig
+            });
+        }
 
+        // Segundo slider (2 items)
+        if (document.getElementsByClassName('tiny-two-item-2').length > 0) {
+            var slider2 = tns({
+                container: '.tiny-two-item-2',
+                items: 2,
+                controls: true,
+                mouseDrag: true,
+                loop: true,
+                rewind: false,
+                autoplay: true,
+                autoplayButtonOutput: false,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: false,
+                navPosition: "bottom",
+                controlsText: ['<i class="mdi mdi-chevron-left"></i>', '<i class="mdi mdi-chevron-right"></i>'],
+                nav: false,
+                speed: 800,
+                gutter: 24,
+                center: true,
+                slideBy: 1,
+                responsive: {
+                    992: {
+                        items: 2,
+                        gutter: 24
+                    },
+                    767: {
+                        items: 2,
+                        gutter: 20
+                    },
+                    320: {
+                        items: 1
+                    }
+                }
+            });
+        }
+    };
+    slider();
+} catch (error) {
+    console.log('Error initializing tiny-slider:', error);
+}
