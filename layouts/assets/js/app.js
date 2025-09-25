@@ -170,7 +170,7 @@ try {
 $(function () {
     $('#my-whatsapp').floatingWhatsApp({
       phone: '56971769875', // Número de WhatsApp
-      popupMessage: '¡Hola! ¿Te interesaría contratar un servicio? ¡Selecciona una opción!',
+      popupMessage: '¡Hola! Te gustaria tener mas informacion sobre el polo ODS 0 ? contáctanos',
       showPopup: true,
       position: 'right',
       autoOpenTimeout: 20000,
