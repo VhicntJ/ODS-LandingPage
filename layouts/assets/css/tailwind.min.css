@@ -2191,7 +2191,7 @@ p {
   }
   .navbar.is-sticky .navbar-nav .active .nav-link {
     --tw-text-opacity: 1;
-    color: rgb(234 88 12 / var(--tw-text-opacity));
+    color: rgb(42 186 235 / var(--tw-text-opacity));
   }
   .navbar.is-sticky .navbar-nav.nav-light .nav-link {
     --tw-text-opacity: 1;
@@ -2199,7 +2199,7 @@ p {
   }
   .navbar.is-sticky .navbar-nav.nav-light .nav-link:hover {
     --tw-text-opacity: 1;
-    color: rgb(234 88 12 / var(--tw-text-opacity));
+    color: rgb(42 186 235 / var(--tw-text-opacity));
   }
   :is(.dark .navbar.is-sticky .navbar-nav.nav-light .nav-link) {
     color: rgb(255 255 255 / 0.6);
@@ -2210,7 +2210,7 @@ p {
   }
   .navbar.is-sticky .navbar-nav.nav-light .active .nav-link {
     --tw-text-opacity: 1;
-    color: rgb(234 88 12 / var(--tw-text-opacity));
+    color: rgb(42 186 235 / var(--tw-text-opacity));
   }
   :is(.dark .navbar.is-sticky .navbar-nav.nav-light .active .nav-link) {
     --tw-text-opacity: 1;
