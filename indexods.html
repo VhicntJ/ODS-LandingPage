@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es" class="light scroll-smooth" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polo Empresarial ODS Cero</title>
+  <meta name="description" content="Cooperación, innovación e ingeniería para la sostenibilidad y regeneración local." />
+  <meta name="keywords" content="ODS, cooperativas, sostenibilidad, regeneración, ESG, agrovoltaico, biomasa, economía circular, CrowdCommerce, Chile" />
+  <meta name="version" content="2.0.0" />
+  <!-- favicon -->
+  <link href="assets/images/Logo_SII.ico" rel="shortcut icon" />
+  <!-- Preconnect y dns-prefetch -->
+  <link rel="preconnect" href="https://unicons.iconscout.com" />
+  <link rel="dns-prefetch" href="https://unicons.iconscout.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Css libs -->
+  <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet" />
+  <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+  <!-- Main Css -->
+  <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+  <link rel="stylesheet" href="assets/libs/whatsapp/floating-wpp.min.css" />
+
+  <!-- Carga diferida de CSS no crítico -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css" />
+  </noscript>
+</head>
+
+<body class="font-rubik text-base text-slate-900 dark:text-white dark:bg-slate-900">
+  <!-- Navbar Start -->
+  <nav class="navbar" id="navbar">
+    <div class="container flex flex-wrap items-center justify-end">
+      <a class="navbar-brand" href="#home" aria-label="Polo Empresarial ODS Cero">
+        <span class="inline-block dark:hidden">
+          <img src="assets/images/logo_SII.png" class="l-dark" alt="Logo" />
+          <img src="assets/images/logo_cabecera_blanco_1.png" class="l-light" alt="Logo" />
+        </span>
+        <img src="assets/images/logo_SII.png" class="hidden dark:inline-block" alt="Logo" />
+      </a>
+
+      <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
+        <!-- Redes -->
+        <ul class="list-none menu-social mb-0">
+          <li class="inline">
+            <a href="#" aria-label="Instagram" rel="noopener noreferrer">
+              <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-instagram"></i></span></span>
+              <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-instagram"></i></span></span>
+            </a>
+          </li>
+          <li class="inline">
+            <a href="#" aria-label="WhatsApp" rel="noopener noreferrer">
+              <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-whatsapp"></i></span></span>
+              <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-whatsapp"></i></span></span>
+            </a>
+          </li>
+          <li class="inline">
+            <a href="#" aria-label="LinkedIn" rel="noopener noreferrer">
+              <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
+              <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-linkedin"></i></span></span>
+            </a>
+          </li>
+        </ul>
+        <!-- Botón hamburguesa -->
+        <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ms-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false">
+          <span class="sr-only">Menú de Navegación</span>
+          <i class="mdi mdi-menu mdi-24px"></i>
+        </button>
+      </div>
+
+      <!-- Navbar Menu -->
+      <div class="navigation lg_992:order-1 lg_992:flex hidden" id="menu-collapse">
+        <ul class="navbar-nav nav-light" id="navbar-navlist">
+          <li class="nav-item"><a class="nav-link active" href="#home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicio">Iniciativas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Quiénes somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#modelo">Modelo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Gobierno</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Coordinar reunión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Start -->
+  <section class="py-36 lg:py-64 w-full table relative bg-[url('../../assets/images/bg/2.jpg')] bg-center bg-cover" id="home">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="container relative">
+      <div class="grid grid-cols-1 mt-12">
+        <h1 class="text-white lg:text-5xl text-3xl lg:leading-normal leading-normal font-medium mb-7">Cooperación, Innovación e Ingeniería para la <br /> Sostenibilidad y Regeneración Local</h1>
+        <p class="text-white opacity-80 mb-0 text-lg">Somos un polo empresarial que agrupa asociaciones empresariales, empresas cooperativas y empresas sociales. Trabajamos con comunidades locales e inversionistas de impacto para crear condiciones que permitan la sostenibilidad y la regeneración local.</p>
+        <div class="relative mt-10">
+          <a href="#servicio" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">Ver iniciativas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero End -->
+
+  <!-- Iniciativas -->
+  <section class="relative md:py-24 py-16" id="servicio">
+    <div class="container">
+      <div class="grid grid-cols-1 pb-8 text-center">
+        <h6 class="text-orange-600 text-xxl font-medium uppercase mb-2">Nuestras Iniciativas</h6>
+        <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">Acciones más que palabras</h3>
+        <p class="text-slate-400 dark:text-slate-300 max-w-2xl mx-auto">Desarrollamos programas en cooperación con comunidades locales para el buen vivir, la producción sostenible y la regeneración territorial.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8">
+        <!-- MEDIERÍAS -->
+        <div class="blog relative rounded-md shadow shadow-slate-200 dark:shadow-slate-800 overflow-hidden">
+          <img src="assets/images/blog/medierias.jpg" alt="Medierías" />
+          <div class="content p-6">
+            <h4 class="text-lg font-medium dark:text-white">MEDIERÍAS</h4>
+            <p class="text-slate-400 mt-3">Trabajo conjunto con cooperativas y agricultura familiar campesina para compartir beneficios en un programa de mediería.</p>
+          </div>
+        </div>
+
+        <!-- CONSORCIO -->
+        <div class="blog relative rounded-md shadow shadow-slate-200 dark:shadow-slate-800 overflow-hidden">
+          <img src="assets/images/blog/consorcio.jpg" alt="Consorcio" />
+          <div class="content p-6">
+            <h4 class="text-lg font-medium dark:text-white">CONSORCIO</h4>
+            <p class="text-slate-400 mt-3">Acuerdos público–privados en ERNC, Agro, Economía Circular, Biomasa, Biotecnología y Nanotecnología; incluye Agrovoltaico Regenera (PMGD, Regiones IV, V y RM) y Plantas de Biomasa (Regiones IV y VI).</p>
+          </div>
+        </div>
+
+        <!-- COMEX -->
+        <div class="blog relative rounded-md shadow shadow-slate-200 dark:shadow-slate-800 overflow-hidden">
+          <img src="assets/images/blog/comex.jpg" alt="COMEX" />
+          <div class="content p-6">
+            <h4 class="text-lg font-medium dark:text-white">COMEX</h4>
+            <p class="text-slate-400 mt-3">Cooperación internacional para promover producción y consumo sostenible, agricultura regenerativa y CrowdCommerce.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <!-- Capitales ESG -->
+        <div class="rounded-md shadow shadow-slate-200 dark:shadow-slate-800 p-6">
+          <h4 class="font-medium text-lg dark:text-white">Capitales de riesgo (ESG)</h4>
+          <p class="text-slate-400 mt-3">Articulamos inversiones de impacto y apoyamos charlas, seminarios y pasantías de Cooperativismo, Innovación e Ingeniería.</p>
+        </div>
+        <!-- Adhesión ODS -->
+        <div class="rounded-md shadow shadow-slate-200 dark:shadow-slate-800 p-6">
+          <h4 class="font-medium text-lg dark:text-white">Enfoque ODS</h4>
+          <p class="text-slate-400 mt-3">Actuamos alineados con ODS 7, 9, 11, 12, 13 y 17, potenciando infraestructura sostenible, producción responsable y alianzas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiénes somos -->
+  <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="about">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <img src="assets/images/about3.jpeg" class="rounded-lg shadow-lg" alt="Quiénes somos" />
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="lg:ms-7">
+            <h6 class="text-orange-600 text-xxl font-medium uppercase mb-6">¿Quiénes somos?</h6>
+            <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto" style="text-align: justify;">
+              Somos un polo empresarial compuesto por gremios, empresas cooperativas y empresas sociales. Sembramos cooperación, innovación e ingeniería para la regeneración y el desarrollo sostenible local en los mercados donde operamos.
+            </p>
+            <h6 class="text-orange-600 text-lg font-semibold mt-6 mb-3">Principios y valores</h6>
+            <ul class="list-disc ms-6 text-slate-600 dark:text-slate-300" style="text-align: justify;">
+              <li>Desarrollo sostenible local mediante CrowdCommerce, ingeniería y tecnologías limpias.</li>
+              <li>Buen vivir; cooperación intra e inter comunitaria.</li>
+              <li>Innovación social abierta y adhesión a principios cooperativos internacionales.</li>
+              <li>Democratización, participación civil activa y accesibilidad.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modelo -->
+  <section class="relative md:py-24 py-16" id="modelo">
+    <div class="container">
+      <div class="grid grid-cols-1 pb-8 text-center">
+        <h6 class="text-orange-600 text-xxl font-medium uppercase mb-2">¿Cómo lo hacemos?</h6>
+        <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">De la co-ideación a la medición de impactos</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-2xl shadow p-6">
+          <h4 class="font-medium text-lg dark:text-white">Paso 1</h4>
+          <p class="text-slate-400 mt-2">Nos reunimos para conocernos e idear soluciones de interés para tu comunidad local.</p>
+        </div>
+        <div class="rounded-2xl shadow p-6">
+          <h4 class="font-medium text-lg dark:text-white">Paso 2</h4>
+          <p class="text-slate-400 mt-2">Generamos un plan y comenzamos a trabajar colaborativamente.</p>
+        </div>
+        <div class="rounded-2xl shadow p-6">
+          <h4 class="font-medium text-lg dark:text-white">Paso 3</h4>
+          <p class="text-slate-400 mt-2">Medimos progresos e impactos con indicadores abiertos (Open Data en construcción).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gobierno / Equipo -->
+  <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="team">
+    <div class="container">
+      <div class="grid grid-cols-1 pb-8 text-center">
+        <h6 class="text-orange-600 text-xxl font-medium uppercase mb-2">Gobierno Corporativo</h6>
+        <p class="text-slate-400 dark:text-slate-300 max-w-2xl mx-auto">Fundación Polo Empresarial ODS Cero (16/11/2021). Construimos bases para operar como Instituto Auxiliar Cooperativo (art. 104 Ley General de Cooperativas).</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3 gap-6 mt-8">
+        <div class="rounded-md shadow-lg p-6 text-center">
+          <h4 class="dark:text-white font-medium">Juan Jaime Olguín</h4>
+          <p class="text-slate-400">Presidente</p>
+        </div>
+        <div class="rounded-md shadow-lg p-6 text-center">
+          <h4 class="dark:text-white font-medium">Sergio Aguilera</h4>
+          <p class="text-slate-400">Vicepresidente</p>
+        </div>
+        <div class="rounded-md shadow-lg p-6 text-center">
+          <h4 class="dark:text-white font-medium">Claudia Berardi</h4>
+          <p class="text-slate-400">Secretaria</p>
+        </div>
+        <div class="rounded-md shadow-lg p-6 text-center">
+          <h4 class="dark:text-white font-medium">Paola Arévalo</h4>
+          <p class="text-slate-400">Tesorera</p>
+        </div>
+        <div class="rounded-md shadow-lg p-6 text-center">
+          <h4 class="dark:text-white font-medium">Jorge Ormazábal</h4>
+          <p class="text-slate-400">Director</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Métricas -->
+    <div class="container mt-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+        <div><h3 class="font-medium text-3xl dark:text-white">30</h3><span class="text-slate-400">Familias cooperadas</span></div>
+        <div><h3 class="font-medium text-3xl dark:text-white">10</h3><span class="text-slate-400">Organismos miembros</span></div>
+        <div><h3 class="font-medium text-3xl dark:text-white">50.000</h3><span class="text-slate-400">Familias impactadas</span></div>
+        <div><h3 class="font-medium text-3xl dark:text-white">M$ 30.000</h3><span class="text-slate-400">Inversión socios</span></div>
+        <div><h3 class="font-medium text-3xl dark:text-white">MUSD 100</h3><span class="text-slate-400">Gestión en curso</span></div>
+        <div><h3 class="font-medium text-3xl dark:text-white">7</h3><span class="text-slate-400">Colaboradores técnicos</span></div>
+      </div>
+      <p class="text-center text-slate-400 mt-4">Datos provenientes de informes del Polo Empresarial ODS Cero.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 w-full table relative bg-[url('../../assets/images/bg/cta.png')] bg-center bg-cover">
+    <div class="absolute inset-0 bg-black opacity-80"></div>
+    <div class="container relative">
+      <div class="grid grid-cols-1 pb-8 text-center">
+        <h3 class="mb-6 md:text-3xl text-2xl text-white font-medium">¿Tu organización quiere impulsar producción sostenible y regenerativa con impacto local?</h3>
+        <p class="text-white opacity-50 max-w-xl mx-auto">Podemos agendar una reunión para co-idear iniciativas y trazar un plan de trabajo con medición de impactos.</p>
+        <div class="relative mt-10">
+          <a href="#contact" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">Coordinar reunión</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="relative md:py-16 py-8 bg-gray-800 dark:bg-slate-800" id="contact">
+    <div class="container">
+      <div class="grid grid-cols-1 pb-8 text-center">
+        <h6 class="text-orange-600 text-xxl font-medium uppercase mb-2">Contáctanos</h6>
+        <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">¡Ponte en contacto!</h3>
+        <p class="text-slate-300 max-w-xl mx-auto">¿Tienes alguna duda o consulta? ¡Escríbenos! Estamos para ayudarte.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-6">
+        <div class="lg:col-span-8 relative">
+          <div class="p-6 rounded-md shadow bg-white dark:bg-slate-900 relative bloom-container">
+            <form method="post" action="./assets/php/contact.php" name="myForm" id="myForm" class="form" onsubmit="return validateForm();">
+              <p class="mb-0" id="error-msg"></p>
+              <div id="simple-msg"></div>
+              <div class="grid lg:grid-cols-12 lg:gap-6">
+                <div class="lg:col-span-6 mb-5">
+                  <input name="name" id="name" type="text" class="form-input" placeholder="Nombre :" required />
+                </div>
+                <div class="lg:col-span-6 mb-5">
+                  <input name="email" id="email" type="email" class="form-input" placeholder="Correo :" required />
+                </div>
+                <div class="lg:col-span-6 mb-5">
+                  <input name="telefono" id="telefono" type="tel" class="form-input" placeholder="Teléfono :" required />
+                </div>
+              </div>
+              <div class="grid grid-cols-1">
+                <div class="mb-5 mt-5">
+                  <input name="subject" id="subject" type="text" class="form-input" placeholder="Asunto :" required />
+                </div>
+                <div class="mb-5">
+                  <p class="font-medium text-slate-600 dark:text-slate-300">Interés:</p>
+                  <div class="flex items-center mb-3">
+                    <input type="checkbox" name="services[]" value="Medierias" id="ciberseguridad" class="form-checkbox mr-4 checkbox-icon" />
+                    <label for="ciberseguridad" class="text-slate-600 dark:text-slate-300">Programa Medierías</label>
+                  </div>
+                  <div class="flex items-center mb-3">
+                    <input type="checkbox" name="services[]" value="Consorcio" id="marketing" class="form-checkbox mr-4 checkbox-icon" />
+                    <label for="marketing" class="text-slate-600 dark:text-slate-300">Consorcio (ERNC / Agro / Circularidad)</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="checkbox" name="services[]" value="COMEX" id="desarrollo" class="form-checkbox mr-4 checkbox-icon" />
+                    <label for="desarrollo" class="text-slate-600 dark:text-slate-300">COMEX / Cooperación Internacional</label>
+                  </div>
+                </div>
+                <div class="mb-5">
+                  <textarea name="comments" id="comments" class="form-input textarea h-28" placeholder="Mensaje :" required></textarea>
+                </div>
+              </div>
+              <button type="submit" id="submit" name="send" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md h-11 justify-center flex items-center">Enviar Mensaje</button>
+            </form>
+            <!-- Loader -->
+            <div id="loader" class="absolute inset-0 flex items-center justify-center hidden z-50">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-4">
+          <div class="lg:ms-8">
+            <div class="flex">
+              <div class="icons text-center mx-auto"><i class="uil uil-phone block rounded text-2xl dark:text-white mb-0"></i></div>
+              <div class="flex-1 ms-6">
+                <h5 class="text-lg dark:text-white mb-2 font-medium">Teléfono</h5>
+                <a href="#" class="text-slate-300">+56 9 0000 0000</a>
+              </div>
+            </div>
+            <div class="flex mt-4">
+              <div class="icons text-center mx-auto"><i class="uil uil-envelope block rounded text-2xl dark:text-white mb-0"></i></div>
+              <div class="flex-1 ms-6">
+                <h5 class="text-lg dark:text-white mb-2 font-medium">Correo</h5>
+                <a href="mailto:contacto@poloods.cl" class="text-slate-300">contacto@poloods.cl</a>
+              </div>
+            </div>
+            <div class="flex mt-4">
+              <div class="icons text-center mx-auto"><i class="uil uil-map-marker block rounded text-2xl dark:text-white mb-0"></i></div>
+              <div class="flex-1 ms-6">
+                <h5 class="text-lg dark:text-white mb-2 font-medium">Ubicación</h5>
+                <p class="text-slate-300 mb-2">Av. Santa Rosa 11.315, La Pintana, Santiago de Chile.<br />Facultad de Ciencias Agronómicas, Universidad de Chile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-slate-800 dark:bg-gray-900">
+    <div class="container">
+      <div class="grid md:grid-cols-12 items-center">
+        <div class="md:col-span-3">
+          <a href="#home" class="logo-footer">
+            <img src="assets/images/logo_cabecera_color_1.png" class="md:ms-0 mx-auto" alt="Logo" />
+          </a>
+        </div>
+        <div class="md:col-span-5 md:mt-0 mt-8">
+          <div class="text-center">
+            <p class="text-gray-400">© <span id="current-year"></span> Fundación Polo Empresarial ODS Cero. Todos los derechos reservados.</p>
+          </div>
+        </div>
+        <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+        <div class="md:col-span-4 md:mt-0 mt-8">
+          <ul class="list-none foot-icon ltr:md:text-right rtl:md:text-left text-center">
+            <li class="inline"><a href="#" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white" aria-label="LinkedIn"><i class="uil uil-linkedin align-middle"></i></a></li>
+            <li class="inline"><a href="#" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white" aria-label="Instagram"><i class="uil uil-instagram align-middle"></i></a></li>
+            <li class="inline"><a href="#" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white" aria-label="WhatsApp"><i class="uil uil-whatsapp align-middle"></i></a></li>
+          </ul>
+          <div class="text-center md:text-right mt-4">
+            <a href="#" class="text-gray-400 hover:text-white mx-2">Declaración de accesibilidad</a>
+            <a href="#" class="text-gray-400 hover:text-white mx-2">Políticas de privacidad</a>
+            <a href="#" class="text-gray-400 hover:text-white mx-2">Derechos de autor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top + Switcher (se mantienen) -->
+  <div id="my-whatsapp">
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-5 bottom-5 end-5 h-9 w-9 text-center bg-orange-600 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+  </div>
+  <div class="fixed top-1/4 -right-2 z-3">
+    <span class="relative inline-block rotate-90">
+      <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+      <label class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
+        <i class="uil uil-moon text-[20px] text-yellow-500"></i>
+        <i class="uil uil-sun text-[20px] text-yellow-500"></i>
+        <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+      </label>
+    </span>
+  </div>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js" defer></script>
+  <script src="assets/libs/tobii/js/tobii.min.js" defer></script>
+  <script src="assets/libs/tiny-slider/min/tiny-slider.js" defer></script>
+  <script src="assets/js/plugins.init.js" defer></script>
+  <script src="assets/libs/toastr/toastr.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/libs/whatsapp/floating-wpp.min.js" defer></script>
+</body>
+
+</html>
+
+
+<!-- Columna Seguridad -->
+                    <div class="col-span-12 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl p-8 h-full min-h-[600px]">
+                        <h3 class="text-center text-xl font-semibold mb-4">Seguridad</h3>
+                        <div class="grid grid-cols-1 gap-6"> 
+    
+                            <!-- Servicio 1 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between ">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-file-search-alt"></i>
+                                    </div>
+                                </div>
+                                <h4 class="font-medium text-lg">1. Implementación y Certificación de ISO 27001:2023</h4>
+                                <p class="text-slate-400 mt-3">Diseñamos SGSI personalizado, documentamos procesos, capacitamos equipos, guiamos certificación, aseguramos cumplimiento normativo para éxito continuo, desarrollo seguro y mejora constante.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#iso27" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <!-- Servicio 2 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-comment-alt-chart-lines"></i>
+                                    </div>
+                                </div>
+                                <h4 class="font-medium text-lg">2. CISO como Servicio (Chief Information Security Officer)</h4>
+                                <p class="text-slate-400 mt-3">Proveemos CISO externo, supervisamos estrategia, gestionamos riesgos, incidentes, cumplimiento normativo, asegurando seguridad sin requerir equipo interno completo.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#iso27" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <!-- Servicio 3 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-fire"></i>
+                                    </div>
+                                </div>
+                                <h4 class="font-medium text-lg">3. Análisis de Vulnerabilidades y Penetration Testing</h4>
+                                <p class="text-slate-400 mt-3">Detectamos vulnerabilidades, evaluamos riesgos, realizamos pruebas, identificamos amenazas, protegemos activos, garantizamos seguridad.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#iso27" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <div class="mb-8">
+                                <button onclick="location.href='/servicios.html#iso27'" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">
+                                    Más servicios
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Columna Desarrollo -->
+                    <div class="col-span-12 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl p-8 h-full min-h-[600px]">
+                        <h3 class="text-center text-xl font-semibold mb-4">Desarrollo</h3>
+                        <div class="grid grid-cols-1 gap-6">
+    
+                            <!-- Servicio 1 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-sky-600/5 text-sky-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-desktop-cloud-alt"></i>
+                                    </div>
+                                </div>
+                                <h4 class="font-medium text-lg">1. Desarrollo de Software Personalizado</h4>
+                                <p class="text-slate-400 mt-3">Creamos soluciones digitales personalizadas, full-stack, automatizando procesos, integrando sistemas existentes, impulsando productividad, crecimiento empresarial y operatividad óptima.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#desarrollo" class="btn btn-link hover:text-sky-600 dark:hover:text-sky-600 after:bg-sky-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <!-- Servicio 2 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-sky-600/5 text-sky-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-mobile-android"></i>
+                                    </div>
+                                </div>
+                                <h4 class="mb-auto font-medium text-lg">2. Desarrollo de Aplicaciones Móviles</h4>
+                                <p class="text-slate-400 mt-3">Diseñamos aplicaciones móviles intuitivas, escalables, nativas o híbridas, integradas con backend y API, garantizando experiencia y calidad excepcionales.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#desarrollo" class="btn btn-link hover:text-sky-600 dark:hover:text-sky-600 after:bg-sky-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <!-- Servicio 3 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-sky-600/5 text-sky-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-process"></i>
+                                    </div>
+                                </div>
+                                <h4 class="font-medium text-lg">3. Modernización de Software</h4>
+                                <p class="text-slate-400 mt-3">Actualizamos sistemas heredados, migramos a tecnologías modernas, optimizamos rendimiento, escalabilidad, seguridad y mejoramos interfaces para mayor adaptabilidad y eficiencia.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#desarrollo" class="btn btn-link hover:text-sky-600 dark:hover:text-sky-600 after:bg-sky-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <div class="mb-8">
+                                <button onclick="location.href='/servicios.html#desarrollo'" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">
+                                    Más servicios
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Columna Marketing Digital -->
+                    <div class="col-span-12 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl p-8 h-full min-h-[600px]">
+                        <h3 class="text-center text-xl font-semibold mb-4">Marketing Digital</h3>
+                        <div class="grid grid-cols-1 gap-6">
+    
+                            <!-- Servicio 1 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-chart"></i>
+                                    </div>
+                                </div>
+                                <h4 class="mb-auto font-medium text-lg">1. Desarrollo de Posicionamiento de Marca</h4>
+                                <p class="text-slate-400 mt-3">Creamos estrategias personalizadas para destacar tu marca en un mercado competitivo, fortaleciendo su identidad visual y emocional, generando vínculos duraderos, reconocimiento y lealtad de clientes clave.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#marketing" class="btn btn-link hover:text-pink-600 dark:hover:text-pink-600 after:bg-pink-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <!-- Servicio 2 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-clapper-board"></i>
+                                    </div>
+                                </div>
+                                <h4 class="font-medium text-lg">2. Producción de Videos Corporativos</h4>
+                                <p class="text-slate-400 mt-3">Desarrollamos videos profesionales que comunican la esencia de tu marca, fortalecen su presencia en el mercado y conectan emocionalmente con tu audiencia objetivo.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#marketing" class="btn btn-link hover:text-pink-600 dark:hover:text-pink-600 after:bg-pink-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <!-- Servicio 3 -->
+                            <div class="grid grid-rows-[auto,1fr,auto] min-h-[500px] flex flex-col justify-between">
+                                <div class="icono-container">
+                                    <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                                        <i class="uil uil-feedback"></i>
+                                    </div>
+                                </div>
+                                <h4 class="mb-auto font-medium text-lg">3. Gestión de Redes Sociales</h4>
+                                <p class="text-slate-400 mt-3">Maximizamos el potencial de tus redes sociales con estrategias efectivas, contenido atractivo y gestión profesional, aumentando visibilidad, interacción, conversión y conexión con tu público.</p>
+                                <div class="mt-8 mb-5">
+                                    <a href="/servicios.html#marketing" class="btn btn-link hover:text-pink-600 dark:hover:text-pink-600 after:bg-pink-600 dark:text-white transition duration-500">Leer más <i class="uil uil-arrow-right"></i></a>
+                                </div>
+                            </div>
+    
+                            <div class="mb-8">
+                                <button onclick="location.href='/servicios.html#marketing'" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">
+                                    Más servicios
+                                </button>
+                            </div>
+                        </div>

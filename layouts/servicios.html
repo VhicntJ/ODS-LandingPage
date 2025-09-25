@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth" dir="ltr">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevSecUp</title>
+    <meta name="description" content="DevSecUp">
+    <meta name="keywords" content="Cyberseguridad, Marketing Digital, Chile, Servicio de desarrollo, Desarrollo">
+    <meta name="version" content="2.0.0">
+    <!-- favicon -->
+    <link href="assets/images/Logo_SII.ico" rel="shortcut icon">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+    <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    
+
+    <!-- Main Css -->
+    <link href="assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+    
+    <link rel="stylesheet" href="assets/libs/whatsapp/floating-wpp.min.css" />
+
+</head>
+
+<body class="font-rubik text-base text-slate-900 dark:text-white dark:bg-slate-900">
+    
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed top-0 left-0 w-full bg- dark:bg-slate-900 shadow-md z-50" id="navbar">
+        <div class="container flex flex-wrap items-center justify-between">
+            <a class="navbar-brand" href="index.html">
+                    <span class="inline-block dark:hidden">
+                        <img src="assets/images/logo_SII.png" class="l-dark" alt="">
+                        <img src="assets/images/logo_SII.png" class="l-light" alt="">
+                    </span>
+                    <img src="assets/images/logo_SII.png" class="hidden dark:inline-block" alt="">
+                </a>
+
+            <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
+                <!-- Navbar Button -->
+                <ul class="list-none menu-social mb-0">
+                    <li class="inline">
+                        <a href="https://www.instagram.com/devsecup/" target="_blank" rel="noopener noreferrer">
+                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-instagram"></i></span></span>
+                                <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-instagram"></i></span></span>
+                            </a>
+                    </li>
+                    <li class="inline">
+                        <a href="">
+                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-whatsapp"></i></span></span>
+                                <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-whatsapp"></i></span></span>
+                            </a>
+                            
+                    </li>
+                    <li class="inline">
+                        <a href="">
+                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
+                                <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
+                            </a>
+                    </li>
+                </ul>
+                <!-- Navbar Collapse Manu Button -->
+                <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ms-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false">
+                        <span class="sr-only">Menu de Navegacion</span>
+                        <i class="mdi mdi-menu mdi-24px"></i>
+                    </button>
+            </div>
+
+            <!-- Navbar Manu -->
+            <div class="navigation lg_992:order-1 lg_992:flex hidden" id="menu-collapse">
+                <ul class="navbar-nav" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicio">Servicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">Sobre nosotros</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features">Soluciones</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#team">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="  #contact">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <section class="relative md:py-16 py-8 bg-gray-50 dark:bg-slate-800 mt-24" id="servicio">
+        <div class="container">
+            <div class="grid grid-cols-1 py-4 pb-8 text-center">
+                <h6 class="text-orange-600 text-xxl font-semibold uppercase mb-6 ">Nuestros Servicios</h6>                
+
+                <p class="text-slate-700 dark:text-slate-300 max-w-xl mx-auto">Descubre nuestros servicios diseñados para impulsar tu negocio y garantizar tu éxito en el mundo digital.</p>
+            </div>
+            <!--end grid-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- End -->
+    
+
+   <!-- Start Services Segurity -->
+   <section class="relative md:py-24 py-16" id="servicio">
+    <div class="container lg mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 pb-8 items-center gap-6">
+            <div class="relative rounded-lg h-full flex items-center justify-center overflow-hidden">
+                <!-- Capa de imagen con opacidad -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-50" 
+                    style="background-image: url('assets/images/nuevo.png');">
+                </div>
+                <!-- Contenido encima de la imagen -->
+                <div class="relative z-8 text-black dark:text-white">
+                    <h3 class="text-2xl font-semibold">
+                        SEGURIDAD A TU NEGOCIO <br>
+                    </h3>
+                </div>
+            </div>
+
+            <div>
+                <p id="iso27" class="text-slate-500 dark:text-slate-300 max-w-xl"style="text-align: justify;" >En DevSecUp, entendemos que la seguridad de la información no es solo un requisito legal o normativo, sino una necesidad estratégica para proteger los activos más valiosos de tu empresa. Nuestro enfoque integral te permite:
+                    <p id="iso27" class="text-slate-700 dark:text-slate-300 max-w-xl "> 
+                    <br>•	Asegurar el cumplimiento legal y normativo, incluyendo la nueva Ley Marco de Ciberseguridad.                  
+                    <br>•	Fortalecer la confianza de tus clientes y socios al demostrar un compromiso sólido con la protección de la información.
+                    <br>•	Reducir riesgos de incidentes de seguridad que puedan impactar negativamente en la continuidad del negocio.
+                    <br>•	Optimizar procesos internos y eficiencia operativa a través de un sistema de gestión estructurado.<br> </p>
+                <p id="iso27" class="text-slate-500 dark:text-slate-300 max-w-xl"style="text-align: justify;"> <br>Nuestros servicios están diseñados para acompañarte en cada etapa de este camino, desde la implementación de estándares internacionales hasta la gestión continua de la seguridad.
+                    </p>
+            </div>
+        </div>
+        <!--end grid-->
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-file-search-alt"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a href=""  class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">1.	Implementación y Certificación de ISO 27001:2023</a>
+                    <p class="text-slate-500 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-500">• Diseñamos y construimos un Sistema de Gestión de Seguridad de la Información (SGSI) personalizado para tu empresa.</span><br>
+                        <span class="block text-slate-500">• Documentamos políticas, procesos y procedimientos necesarios para cumplir con el estándar.</span><br>
+                        <span class="block text-slate-500">• Capacitamos a tu equipo para que esté preparado frente a auditorías y certificaciones.</span><br>
+                        <span class="block text-slate-500 mt-2">• Te acompañamos en todo el proceso de certificación para garantizar el éxito.</span>
+                      </p>
+
+                    
+                </div>
+            </div>
+
+            <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-comment-alt-chart-lines"></i>
+                </div>
+
+                <div class="content mt-3">
+                    <div id="ciso-wrapper" style="position: relative; top: -200px;"></div>
+                    <a href="" id="ciso" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">2.	CISO como Servicio (Chief Information Security Officer)</a>
+                    <p class="text-slate-500 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-500">• Ofrecemos un Director de Seguridad respaldado por un equipo de especialistas en SGSI.</span><br>
+                        <span class="block text-slate-500 mt-6">• Supervisamos la estrategia y ejecución de la seguridad de la información en tu empresa.</span><br>
+                        <span class="block text-slate-500">• Te ayudamos a gestionar incidentes, riesgos y cumplimiento normativo sin necesidad de contar con un equipo interno completo.</span>
+                      </p>
+                      
+
+                </div>
+            </div>
+
+    
+
+            <div class="features p-6 hover:shadow-xl shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-fire"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">3.	Análisis de Vulnerabilidades</a>
+                    <p class="text-slate-400 mt-10"style="text-align: justify;">
+                        <span class="text-slate-600 block">Identifica y corrige las brechas de seguridad en tu infraestructura tecnológica antes de que sean explotadas.</span>
+                        <span class="text-slate-600 block">Nuestro servicio de Análisis de Vulnerabilidades evalúa redes, aplicaciones, servidores y dispositivos para detectar configuraciones inseguras, software desactualizado y posibles puntos de ataque.</span>
+                        <span class="text-slate-500 block mt-6">• Generamos un informe detallado con riesgos clasificados por nivel de criticidad.</span>
+                        <span class="text-slate-500 block">• Proveemos recomendaciones específicas para mitigar las vulnerabilidades detectadas.</span>
+                        <span class="text-slate-500 block">• Protege tu organización proactivamente y reduce el riesgo de incidentes de seguridad.</span>
+                      </p>
+                      
+
+                    
+                </div>
+            </div>
+
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-lock-access"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">4.	Servicio de Ethical Hacking</a>
+                    <p class="text-slate-400 mt-10" style="text-align: justify;">
+                        <span class="block text-slate-600">
+                          Piensa como un atacante, pero actúa como un defensor. Nuestro servicio de Ethical Hacking replica ataques reales en tu sistema para identificar vulnerabilidades críticas antes de que lo hagan los cibercriminales.
+                        </span>
+                        <span class="block text-slate-500 mt-2">• Simulamos escenarios de ataque controlados en aplicaciones, redes y dispositivos.</span>
+                        <span class="block text-slate-500 mt-2">• Te brindamos un plan de remediación detallado basado en las vulnerabilidades detectadas.</span>
+                        <span class="block text-slate-600 mt-6">Confía en nuestro equipo de expertos para fortalecer tu infraestructura tecnológica y minimizar riesgos.</span>
+                      </p>
+
+                    
+                </div>
+            </div>
+
+            <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-shield-exclamation"></i>
+                </div>
+
+                <div class="content mt-3">
+                    <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">5.	Red Team | Purple Team</a>
+                    <p class="text-slate-400 mt-10" style="text-align: justify;">
+                        <span class="block text-slate-600">Pon a prueba la preparación de tu organización con equipos especializados en ataque y defensa.</span><br>
+                        <span class="block text-slate-500 mt-2">• Red Team: Simulamos ataques avanzados para evaluar tus controles de seguridad.</span><br>
+                        <span class="block text-slate-500">• Purple Team: Trabajamos en colaboración con tu equipo de defensa (Blue Team) para mejorar las estrategias de detección y respuesta.</span><br>
+                        <span class="block text-slate-600 mt-2">Este enfoque te permite fortalecer tanto tu capacidad ofensiva como defensiva, asegurando una protección integral contra amenazas avanzadas.</span>
+                      </p>
+                      
+
+                    
+                </div>
+            </div>    
+                <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                    <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                        <i class="uil uil-bug"></i>
+                    </div>
+    
+                    <div class="content mt-6">
+                        <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">6.	Simulación de Phishing y Ransomware</a>
+                        <p class="text-slate-400 mt-4" style="text-align: justify;">
+                            <span class="block text-slate-600">Educa a tu equipo y reduce los riesgos humanos con simulaciones realistas de las ciberamenazas más comunes.</span><br>
+                            <span class="block text-slate-500 mt-2">• Phishing: Simulamos ataques por correo electrónico para medir la respuesta de tu personal y educarlos en la identificación de intentos de fraude.</span><br>
+                            <span class="block text-slate-500">• Ransomware: Probamos la resistencia de tu infraestructura frente a escenarios reales de malware que cifran datos.</span><br>
+                            <span class="block text-slate-600 mt-2">Protege a tu organización al aumentar la conciencia de seguridad y preparar a tu equipo para actuar frente a estos ataques.</span>
+                          </p>
+                          
+    
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!--end grid-->
+    </div>
+    <!--end container-->
+   </section>
+
+    <!-- Start Services Softwares AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+   <section class="relative md:py-24 py-16" id="servicio">
+    <div class="container lg mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 pb-8 items-center gap-6">
+            <div class="relative rounded-lg h-full flex items-center justify-center overflow-hidden">
+                <!-- Capa de imagen con opacidad -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-50" 
+                    style="background-image: url('assets/images/nuevo2.png');">
+                </div>
+                <!-- Contenido encima de la imagen -->
+                <div class="relative z-8 text-black dark:text-white">
+                    <h3 class="text-2xl font-semibold">
+                        DESARROLLO DE SOFTWARE
+                    </h3>
+                </div>
+            </div>
+
+            <div>
+                <p id="desarrollo" class="text-slate-700 dark:text-slate-300 max-w-xl" style="text-align: justify;">Crea soluciones de software sólidas, ágiles y adaptables a las necesidades de tu negocio.
+                    El desarrollo de software consiste en identificar tus objetivos empresariales, conocer tus puntos débiles y crear soluciones a medida para tu negocio.
+                    Utilizamos inteligencia artificial y otras tecnologías de vanguardia para diseñar, construir y desarrollar soluciones digitales integrales para nuestros clientes. Desde el diseño de interfaces hasta plataformas escalables, nuestras capacidades full-stack generan experiencias más personalizadas.                    
+                    </p>
+            </div>
+        </div>
+        <!--end grid-->
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-sky-600/5 text-sky-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-desktop-cloud-alt"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a  class="text-lg hover:text-sky-600 dark:text-white dark:hover:text-sky-600 transition-all duration-500 ease-in-out font-medium">1. Desarrollo de Software Personalizado</a>
+                    <p class="text-slate-400 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-600">Diseñamos y desarrollamos soluciones a medida que se adaptan a las necesidades específicas de tu empresa. Nuestro equipo trabaja estrechamente contigo para comprender tus objetivos y convertir tus ideas en herramientas digitales que impulsen la productividad y el crecimiento de tu negocio.</span><br>
+                        <span class="block text-slate-500 mt-2">• Soluciones a medida para automatización de procesos y gestión empresarial.</span><br>
+                        <span class="block text-slate-500">• Desarrollo de software full-stack con tecnologías modernas y robustas.</span><br>
+                        <span class="block text-slate-500">• Integraciones con sistemas existentes para optimizar la operatividad.</span>
+                      </p>
+                      
+                    
+                </div>
+            </div>
+
+            <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-sky-600/5 text-sky-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-mobile-android"></i>
+                </div>
+
+                <div class="content mt-3">
+                    <a href="" class="text-lg hover:text-sky-600 dark:text-white dark:hover:text-sky-600 transition-all duration-500 ease-in-out font-medium">2. Desarrollo de Aplicaciones Móviles</a>
+                    <p class="text-slate-400 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-600">Transforma tu negocio con aplicaciones móviles intuitivas y escalables diseñadas para brindar la mejor experiencia al usuario. Desde la idea inicial hasta el lanzamiento en las principales plataformas, nuestro equipo se asegura de que cada aplicación cumpla con los más altos estándares de calidad.</span><br>
+                        <span class="block text-slate-500 mt-2">• Aplicaciones híbridas con frameworks avanzados como Flutter y React Native.</span><br>
+                        <span class="block text-slate-500 mt-6">• Desarrollo nativo para iOS y Android.</span><br>
+                        <span class="block text-slate-500 mt-6">• Integración con servicios de backend y API personalizados.</span>
+                      </p>
+                      
+
+                </div>
+            </div>
+
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-sky-600/5 text-sky-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-process"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a href="" class="text-lg hover:text-sky-600 dark:text-white dark:hover:text-sky-600 transition-all duration-500 ease-in-out font-medium">3. Modernización de Software</a>
+                    <p class="text-slate-400 mt-8" style="text-align: justify;">
+                        <span class="block text-slate-600">Actualizamos y optimizamos tus aplicaciones y sistemas heredados para que se adapten a las necesidades del mercado actual. Nuestro servicio de modernización garantiza que tus soluciones tecnológicas sean más rápidas, seguras y escalables.</span><br>
+                        <span class="block text-slate-500 mt-10">• Migración a tecnologías modernas y servicios en la nube (AWS, Azure, Google Cloud).</span><br>
+                        <span class="block text-slate-500">• Optimización de rendimiento y escalabilidad.</span><br>
+                        <span class="block text-slate-500">• Actualización de interfaces de usuario para mejorar la experiencia del cliente.</span>
+                      </p>
+                      
+
+                    
+                </div>
+            </div>    
+                    </div>
+                </div>
+           <!-- </div>-->
+       <!-- </div>-->
+        <!--end grid-->
+
+   </section>
+
+   <section class="relative md:py-24 py-16" id="servicio">
+    <div class="container lg mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 pb-8 items-center gap-6">
+            <div class="relative rounded-lg h-full flex items-center justify-center overflow-hidden">
+                <!-- Capa de imagen con opacidad -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-50" 
+                    style="background-image: url('assets/images/nuevo3.png');">
+                </div>
+                <!-- Contenido encima de la imagen -->
+                <div class="relative z-8 text-black dark:text-white">
+                    <h3 class="text-2xl font-semibold">
+                        MARKETING DIGITAL
+                    </h3>
+                </div>
+            </div>
+
+            <div>
+                <p id="marketing" class="text-slate-700 dark:text-slate-300 max-w-xl"style="text-align: justify;" >Te ayudamos a construir una identidad sólida y reconocible a través del desarrollo estratégico de posicionamiento de marca, la creación de videos corporativos impactantes y la gestión integral de redes sociales. 
+                    Nuestro enfoque incluye optimización SEO para aumentar tu visibilidad en motores de búsqueda y campañas digitales efectivas 
+                    que conectan con tu audiencia ideal. Además, ofrecemos soluciones innovadoras en diseño web y estrategias de email marketing para fortalecer la 
+                    relación con tus clientes y alcanzar tus objetivos comerciales. Con nosotros, tu marca estará siempre un paso adelante.                    
+                    </p>
+            </div>
+        </div>
+        <!--end grid-->
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-star"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a  class="text-lg hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-all duration-500 ease-in-out font-medium">1. Desarrollo de Posicionamiento de Marca</a>
+                    <p class="text-slate-400 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-600">Creamos estrategias personalizadas para destacar tu marca en un mercado competitivo, fortaleciendo su identidad visual y emocional. Nuestro objetivo es construir un vínculo duradero entre tu marca y tus clientes, asegurando reconocimiento y lealtad.</span><br>
+                        <span class="block text-slate-500 mt-2">• Construcción y fortalecimiento de la identidad de tu marca.</span><br>
+                        <span class="block text-slate-500">• Creación de estrategias personalizadas para destacar en tu mercado objetivo.</span><br>
+                        <span class="block text-slate-500">• Diseño de logotipos, manual de marca y branding visual.</span>
+                      </p>
+                      
+
+                    
+                </div>
+            </div>
+
+            <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-clapper-board"></i>
+                </div>
+
+                <div class="content mt-2">
+                    <a href="" class="text-lg hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-all duration-500 ease-in-out font-medium">2. Producción de Videos Corporativos</a>
+                    <p class="text-slate-400 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-600">Diseñamos y producimos contenido audiovisual profesional que comunica la esencia de tu empresa. Desde videos promocionales hasta testimonios o presentaciones corporativas, aseguramos un impacto visual y emocional en tu audiencia.</span><br>
+                        <span class="block text-slate-500 mt-2">• Conceptualización y creación de videos profesionales para empresas.</span><br>
+                        <span class="block text-slate-500">• Producción de contenido audiovisual para promocionar productos, servicios y eventos.</span><br>
+                        <span class="block text-slate-500">• Edición profesional con gráficos animados, subtítulos y efectos personalizados.</span>
+                      </p>
+                      
+
+                </div>
+            </div>
+
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-feedback"></i>
+                </div>
+
+                <div class="content mt-6">
+                    <a href="" class="text-lg hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-all duration-500 ease-in-out font-medium">3. Gestión de Redes Sociales</a>
+                    <p class="text-slate-400 mt-8" style="text-align: justify;">
+                        <span class="block text-slate-600">Maximizamos el potencial de tus redes sociales con estrategias de contenido atractivo y gestión profesional. Nos enfocamos en aumentar tu visibilidad, interacción y conversión, adaptándonos a las tendencias y comportamientos del público objetivo.</span><br>
+                        <span class="block text-slate-500 mt-2">• Administración de cuentas en plataformas clave como Facebook, Instagram, LinkedIn y Twitter.</span><br>
+                        <span class="block text-slate-500">• Creación de contenido atractivo y alineado con tu marca.</span><br>
+                        <span class="block text-slate-500">• Implementación de estrategias para aumentar seguidores, interacción y conversiones.</span><br>
+                        <span class="block text-slate-500">• Monitoreo y análisis de métricas para mejorar el rendimiento.</span>
+                      </p>
+                      
+                    
+                </div>
+            </div>
+            <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-megaphone"></i>
+                </div>
+
+                <div class="content mt-7">
+                    <a  class="text-lg hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-all duration-500 ease-in-out font-medium">4. Campañas de Marketing Digital</a>
+                    <p class="text-slate-400 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-600">Diseñamos y gestionamos campañas publicitarias efectivas en plataformas como Google Ads y redes sociales. Nuestro enfoque asegura segmentación precisa y resultados medibles, maximizando el retorno de inversión.</span><br>
+                        <span class="block text-slate-500 mt-2">• Creación y gestión de campañas publicitarias en Google Ads, Facebook Ads y otras plataformas.</span><br>
+                        <span class="block text-slate-500">• Segmentación avanzada para llegar a tu audiencia ideal.</span>
+                      </p>
+                      
+
+                    
+                </div>
+            </div>
+
+            <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
+                <div class="w-20 h-20 bg-pink-600/5 text-pink-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                    <i class="uil uil-envelope-upload"></i>
+                </div>
+
+                <div class="content mt-3">
+                    <a href="" class="text-lg hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-all duration-500 ease-in-out font-medium">5. Estrategias de Email Marketing</a>
+                    <p class="text-slate-400 mt-3" style="text-align: justify;">
+                        <span class="block text-slate-600">Creamos campañas de email marketing personalizadas para conectar de manera directa y efectiva con tus clientes. Desde newsletters informativas hasta promociones, garantizamos contenido relevante y atractivo.</span><br>
+                        <span class="block text-slate-500 mt-2">• Creación de newsletters y correos promocionales personalizados.</span><br>
+                        <span class="block text-slate-500">• Automatización de campañas para mejorar la relación con tus clientes.</span><br>
+                        <span class="block text-slate-500">• Análisis de tasas de apertura, clics y conversiones para maximizar resultados.</span>
+                      </p>
+                      
+
+                </div>
+            </div>
+
+           
+                    </div>
+                </div>
+           <!-- </div>-->
+       <!-- </div>-->
+        <!--end grid-->
+
+   </section>
+    
+    
+    <!-- Start -->
+
+    <section class="relative md:py-16 py-8 bg-gray-800 dark:bg-slate-800" id="contact">
+        <div class="container">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h6 class="text-orange-600 text-xxl font-medium uppercase mb-2">Contáctanos</h6>
+                <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">¡Ponte en contacto!</h3>
+                <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">
+                    ¿Tienes alguna duda o consulta? ¡Escríbenos! Estamos para ayudarte.
+                </p>
+            </div>
+    
+            <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-6">
+                <div class="lg:col-span-8 relative">
+                    <div class="p-6 rounded-md shadow bg-white dark:bg-slate-900 relative bloom-container">
+                        <form method="post" action="./assets/php/contact.php" name="myForm" id="myForm" class="form " onsubmit="return validateForm();">
+                            <p class="mb-0" id="error-msg"></p>
+                            <div id="simple-msg"></div>
+                            <div class="grid lg:grid-cols-12 lg:gap-6"> 
+                                <div class="lg:col-span-6 mb-5">
+                                    <input name="name" id="name" type="text" class="form-input" placeholder="Nombre :" required>
+                                </div>
+                
+                                <div class="lg:col-span-6 mb-5">
+                                    <input name="email" id="email" type="email" class="form-input" placeholder="Correo :" required>
+                                </div>
+
+                                <div class="lg:col-span-6 mb-5">
+                                    <input name="telefono" id="telefono" type="tel" class="form-input" placeholder="Teléfono :" required>
+                                </div>
+                            </div>
+                
+                            <div class="grid grid-cols-1">
+                                <div class="mb-5 mt-5">
+                                    <input name="subject" id="subject" type="text" class="form-input" placeholder="Asunto :" required>
+                                </div>
+                
+                                <!-- Nueva sección de servicios -->
+                                <div class="mb-5">
+                                    <p class="font-medium text-slate-600 dark:text-slate-300">Servicio interesado:</p>
+                                    <div class="flex items-center mb-3">
+                                        <input type="checkbox" name="services[]" value="Ciberseguridad" id="ciberseguridad" class="form-checkbox mr-4 checkbox-icon">
+                                        <label for="ciberseguridad" class="text-slate-600 dark:text-slate-300">
+                                            Servicio de Ciberseguridad
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center mb-3">
+                                        <input type="checkbox" name="services[]" value="Marketing Digital" id="marketing" class="form-checkbox mr-4 checkbox-icon">
+                                        <label for="marketing" class="text-slate-600 dark:text-slate-300">
+                                            Servicio de Marketing Digital
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" name="services[]" value="Desarrollo" id="desarrollo" class="form-checkbox mr-4 checkbox-icon">
+                                        <label for="desarrollo" class="text-slate-600 dark:text-slate-300">
+                                            Servicio de Desarrollo
+                                        </label>
+                                    </div>
+                                </div>
+                
+                                <div class="mb-5">
+                                    <textarea name="comments" id="comments" class="form-input textarea h-28" placeholder="Mensaje :" required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit" name="send" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md h-11 justify-center flex items-center ">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                        <!-- Loader -->
+                        <div id="loader" class="absolute inset-0 flex items-center justify-center  hidden z-50">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="lg:col-span-4">
+                    <div class="lg:ms-8">
+                        <div class="flex">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-phone block rounded text-2xl dark:text-white mb-0"></i>
+                            </div>
+                            <div class="flex-1 ms-6">
+                                <h5 class="text-lg dark:text-white mb-2 font-medium">Teléfono</h5>
+                                <a href="" class="text-slate-400">+569 7176 9875</a>
+                            </div>
+                        </div>
+    
+                        <div class="flex mt-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-envelope block rounded text-2xl dark:text-white mb-0"></i>
+                            </div>
+                            <div class="flex-1 ms-6">
+                                <h5 class="text-lg dark:text-white mb-2 font-medium">Correo</h5>
+                                <a href="mailto:contacto@devsecup.cl" class="text-slate-400">contacto@devsecup.cl</a>
+                            </div>
+                        </div>
+    
+                        <div class="flex mt-4">
+                            <div class="icons text-center mx-auto">
+                                <i class="uil uil-map-marker block rounded text-2xl dark:text-white mb-0"></i>
+                            </div>
+                            <div class="flex-1 ms-6">
+                                <h5 class="text-lg dark:text-white mb-2 font-medium">Ubicación</h5>
+                                <p class="text-slate-400 mb-2">AVENIDA JUAN CISTERNAS N° 2497 OFICINA 307</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end section-->
+    <!-- End -->
+
+    <!-- Start Footer -->
+    
+    <!-- Start Footer -->
+    <footer class="py-8 bg-slate-800 dark:bg-gray-900">
+        <div class="container">
+            <div class="grid md:grid-cols-12 items-center">
+                <div class="md:col-span-3">
+                    <a href="#" class="logo-footer">
+                            <img src="assets/images/logo_cabecera_color_1.png" class="md:ms-0 mx-auto" alt="">
+                        </a>
+                </div>
+
+                <div class="md:col-span-5 md:mt-0 mt-8">
+                    <div class="text-center">
+                        <p class="text-gray-400">© <span id="current-year"></span> DevSecUp</p>
+                    </div>
+                </div>
+                <script>
+                    // Inserta dinámicamente el año actual en el elemento con el ID "current-year"
+                    document.getElementById('current-year').textContent = new Date().getFullYear();
+                </script>
+                
+
+                <div class="md:col-span-4 md:mt-0 mt-8">
+                    <ul class="list-none foot-icon ltr:md:text-right rtl:md:text-left text-center">
+                        
+                        <li class="inline"><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-linkedin align-middle" title="Linkedin"></i></a></li>
+                        <li class="inline"><a href="https://www.instagram.com/devsecup/" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-instagram align-middle" title="Instagram"></i></a></li>
+                        <li class="inline"><a href="https://api.whatsapp.com/send/?phone=56971769875" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-whatsapp align-middle" title="Whatsapp"></i></a></li>
+                        
+                        
+                        
+                    </ul>
+                    <!--end icon-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </footer>
+    <!--end footer-->
+    <!-- End Footer -->
+
+    <!-- Back to top -->
+    <div class="" id="my-whatsapp">
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-5 bottom-5 end-5 h-9 w-9 text-center bg-orange-600 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+    </div>
+    
+    <!-- Back to top -->
+
+    <!-- Switcher -->
+    <div class="fixed top-1/4 -right-2 z-3">
+        <span class="relative inline-block rotate-90">
+                <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+                <label class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
+                    <i class="uil uil-moon text-[20px] text-yellow-500"></i>
+                    <i class="uil uil-sun text-[20px] text-yellow-500"></i>
+                    <span class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+        </label>
+        </span>
+    </div>
+    <!-- Switcher -->
+
+    <!-- JAVASCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
+    <script src="assets/libs/tobii/js/tobii.min.js"></script>
+    <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+    <script src="assets/js/plugins.init.js"></script>
+    <script src="assets/libs/toastr/toastr.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+    <script src="assets/libs/whatsapp/floating-wpp.min.js"></script>    
+    <!-- JAVASCRIPTS -->
+</body>
+
+</html>
