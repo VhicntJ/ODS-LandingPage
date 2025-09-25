@@ -3708,3 +3708,22 @@ html[dir="rtl"] .tns-visually-hidden {
     line-height: 1.5 !important;
   }
 }
+
+/* Colores personalizados para ODS */
+.bg-green-600 { background-color: #059669 !important; }
+.bg-blue-600 { background-color: #2563eb !important; }
+.bg-purple-600 { background-color: #9333ea !important; }
+.border-green-600 { border-color: #059669 !important; }
+.border-blue-600 { border-color: #2563eb !important; }
+.border-purple-600 { border-color: #9333ea !important; }
+.text-green-600 { color: #059669 !important; }
+.text-blue-600 { color: #2563eb !important; }
+.text-purple-600 { color: #9333ea !important; }
+.from-green-50 { --tw-gradient-from: #f0fdf4 !important; }
+.to-emerald-50 { --tw-gradient-to: #ecfdf5 !important; }
+.from-blue-50 { --tw-gradient-from: #eff6ff !important; }
+.to-indigo-50 { --tw-gradient-to: #eef2ff !important; }
+.from-purple-50 { --tw-gradient-from: #faf5ff !important; }
+.to-violet-50 { --tw-gradient-to: #f5f3ff !important; }
+.from-orange-50 { --tw-gradient-from: #fff7ed !important; }
+.to-amber-50 { --tw-gradient-to: #fffbeb !important; }
