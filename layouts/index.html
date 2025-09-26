@@ -1713,52 +1713,109 @@ empresas cooperativas.
     <!-- End -->
 
     <!-- Start Footer -->
-    <footer class="py-8 bg-slate-800 dark:bg-gray-900">
+    <footer class="py-12 bg-slate-800 dark:bg-gray-900">
         <div class="container">
-            <div class="grid md:grid-cols-12 items-center">
-                <div class="md:col-span-3">
-                    <a href="#" class="logo-footer">
-                            <img src="assets/images/Icono_Coop.jpg" class="md:ms-0 mx-auto" alt="">
-                        </a>
+            <!-- Sección principal del footer -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 mb-8">
+                <!-- Logo y descripción -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="logo-footer block mb-4">
+                        <img src="assets/images/Icono_Coop.jpg" class="mx-auto lg:mx-0 h-12" alt="Logo ODS Cero">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Cooperación, innovación e ingeniería para la sostenibilidad y regeneración local.
+                    </p>
                 </div>
 
-                <div class="md:col-span-5 md:mt-0 mt-8">
-                    <div class="text-center">
-                        <p class="text-gray-400">@<span id="current-year"></span> Todos los contenidos de este sitio son Derechos
-                        Reservados de Fundación Polo Empresarial ODS Cero.</p>
+                <!-- Ubicación -->
+                <div class="lg:col-span-1">
+                    <h6 class="text-white font-medium mb-4 text-lg">Ubicación</h6>
+                    <div class="flex items-start space-x-3">
+                        <i class="uil uil-map-marker text-orange-600 text-xl mt-1"></i>
+                        <div>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Av. Santa Rosa 11.315, La Pintana<br>
+                                Santiago de Chile
+                            </p>
+                            <p class="text-gray-400 text-sm mt-2 font-medium">
+                                Facultad de Ciencias Agronómicas<br>
+                                Universidad de Chile
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <script>
-                    // Inserta dinámicamente el año actual en el elemento con el ID "current-year"
-                    document.getElementById('current-year').textContent = new Date().getFullYear();
-                </script>
-                
 
-                        if (window.lucide && typeof window.lucide.createIcons === 'function') {
-                            window.lucide.createIcons();
-                        }
-                        if (window.lucide && typeof window.lucide.createIcons === 'function') {
-                            window.lucide.createIcons();
-                        }
-                <div class="md:col-span-4 md:mt-0 mt-8">
-                    <ul class="list-none foot-icon ltr:md:text-right rtl:md:text-left text-center">
-                        
-                        <li class="inline"><a href="//https://www.linkedin.com/company/odscero" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-linkedin align-middle" title="Linkedin"></i></a></li>
-                        <li class="inline"><a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-instagram align-middle" title="Instagram"></i></a></li>
-                        <li class="inline"><a href="https://api.whatsapp.com/send/?phone=56975942289" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-whatsapp align-middle" title="Whatsapp"></i></a></li>
-                        <li class="inline"><a href="https://www.facebook.com/poloempresarial.odscero" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-facebook align-middle" title="facebook"></i></a></li>
-                       
-                        
-                        
+                <!-- Enlaces legales -->
+                <div class="lg:col-span-1">
+                    <h6 class="text-white font-medium mb-4 text-lg">Información Legal</h6>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="/declaracion-accesibilidad" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">
+                                Declaración de Accesibilidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/politicas-privacidad" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">
+                                Políticas de Privacidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/derechos-autor" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">
+                                Políticas de Derechos de Autor
+                            </a>
+                        </li>
                     </ul>
-                    <!--end icon-->
                 </div>
-                <!--end col-->
+
+                <!-- Redes sociales -->
+                <div class="lg:col-span-1">
+                    <h6 class="text-white font-medium mb-4 text-lg">Síguenos</h6>
+                    <ul class="flex flex-wrap gap-5 justify-start">
+                        <li>
+                            <a href="https://www.linkedin.com/company/odscero" target="_blank" rel="noopener noreferrer" 
+                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-orange-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="uil uil-linkedin text-xl"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" 
+                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-orange-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="uil uil-instagram text-xl"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send/?phone=56975942289" target="_blank" rel="noopener noreferrer" 
+                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-orange-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="uil uil-whatsapp text-xl"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/poloempresarial.odscero" target="_blank" rel="noopener noreferrer" 
+                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-orange-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                                <i class="uil uil-facebook text-xl"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!--end row-->
+
+            <!-- Línea separadora -->
+            <div class="border-t border-slate-700 dark:border-gray-800 pt-6">
+                <!-- Copyright -->
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm">
+                        © <span id="current-year"></span> Todos los contenidos de este sitio son Derechos Reservados de 
+                        <span class="text-orange-600 font-medium">Fundación Polo Empresarial ODS Cero</span>
+                    </p>
+                </div>
+            </div>
         </div>
         <!--end container-->
     </footer>
+    <script>
+        // Inserta dinámicamente el año actual en el elemento con el ID "current-year"
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
     <!--end footer-->
     <!-- End Footer -->
 
