@@ -56,6 +56,11 @@
     z-index: 1000000;
 }
 
+/* Forzar colores del popup en modo oscuro */
+.dark .floating-wpp .floating-wpp-popup {
+    background-color: #E5DDD5 !important;
+}
+
 .floating-wpp .floating-wpp-popup.active {
     padding: 0 12px 12px;
     width: 260px;
@@ -72,11 +77,19 @@
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
     opacity: 0;
     transition: opacity .2s;
+    color: #333 !important; /* Forzar color negro siempre */
+}
+
+/* Forzar texto negro en modo oscuro también */
+.dark .floating-wpp .floating-wpp-popup .floating-wpp-message {
+    color: #333 !important;
+    background-color: #fff !important;
 }
 
 .floating-wpp .floating-wpp-popup.active .floating-wpp-message {
     opacity: 1;
     transition-delay: .2s;
+    color: #333 !important; /* Asegurar color negro cuando está activo */
 }
 
 /* Header Styles */
@@ -98,6 +111,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Forzar fondo blanco del área de input en modo oscuro */
+.dark .floating-wpp .floating-wpp-input-message {
+    background-color: #fff !important;
 }
 
 .floating-wpp .floating-wpp-input-message textarea {
@@ -183,4 +201,21 @@
     letter-spacing: 0.3px;
     z-index: 1;
     position: relative;
+}
+
+/* Estilos adicionales para modo oscuro - WhatsApp Widget */
+.dark .floating-wpp .floating-wpp-popup * {
+    color: inherit;
+}
+
+.dark .floating-wpp .floating-wpp-popup .floating-wpp-message,
+.dark .floating-wpp .floating-wpp-popup .floating-wpp-message * {
+    color: #333 !important;
+}
+
+/* Asegurar que el texto del mensaje siempre sea legible */
+.floating-wpp .floating-wpp-popup .floating-wpp-message,
+.floating-wpp .floating-wpp-popup .floating-wpp-message * {
+    color: #333 !important;
+    text-shadow: none !important;
 }

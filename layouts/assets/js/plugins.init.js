@@ -23,42 +23,70 @@ try {
 }
  */
 //=========================================//
-/*/*            03) Data Counter           */
+/*/*            02) Data Counter           */
 //=========================================//
-/*
 try {
-    const counter = document.querySelectorAll('.counter-value');
-    const speed = 2500; // The lower the slower
+    // Función para formatear números con separadores de miles
+    function formatNumber(num) {
+        if (num >= 1000) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+        return num.toString();
+    }
 
-    counter.forEach(counter_value => {
-        const updateCount = () => {
-            const target = +counter_value.getAttribute('data-target');
-            const count = +counter_value.innerText;
+    // Función para animar contadores
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter-value');
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const speed = 2000; // Duración total de la animación en ms
+            const increment = target / (speed / 16); // 60fps aprox
+            let current = 0;
+            
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    if (current > target) current = target;
+                    
+                    // Formatear el número mostrado
+                    counter.textContent = formatNumber(Math.floor(current));
+                    
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = formatNumber(target);
+                }
+            };
+            
+            updateCounter();
+        });
+    }
 
-            // Lower inc to slow and higher to slow
-            var inc = target / speed;
-
-            if (inc < 1) {
-                inc = 1;
-            }
-
-            // Check if target is reached
-            if (count < target) {
-                // Add inc to count and output in counter_value
-                counter_value.innerText = (count + inc).toFixed(0);
-                // Call function every ms
-                setTimeout(updateCount, 1);
-            } else {
-                counter_value.innerText = target;
-            }
-        };
-
-        updateCount();
-    });
+    // Intersection Observer para activar la animación cuando la sección es visible
+    const statsSection = document.getElementById('stats-section');
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Pequeño delay para un efecto más suave
+                    setTimeout(() => {
+                        animateCounters();
+                    }, 200);
+                    
+                    // Desconectar el observer después de la primera animación
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5 // Activar cuando el 50% de la sección es visible
+        });
+        
+        observer.observe(statsSection);
+    }
+    
 } catch (err) {
-
+    console.error("Error en los contadores:", err);
 }
- */
 
 //=========================================//
 /*/* 03) Typed Text animation (animation) */

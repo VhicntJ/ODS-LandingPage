@@ -143,6 +143,46 @@
     .focus\:ring-sky-600:focus {
       --tw-ring-color: var(--celeste-600) !important;
     }
+
+    /* Animaciones para los contadores */
+    .counter-box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .counter-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .counter-value {
+      display: inline-block;
+      transition: all 0.3s ease;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Animación de entrada para las tarjetas de estadísticas */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .counter-box {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .counter-box:nth-child(1) { animation-delay: 0.1s; }
+    .counter-box:nth-child(2) { animation-delay: 0.2s; }
+    .counter-box:nth-child(3) { animation-delay: 0.3s; }
+    .counter-box:nth-child(4) { animation-delay: 0.4s; }
+    .counter-box:nth-child(5) { animation-delay: 0.5s; }
+    .counter-box:nth-child(6) { animation-delay: 0.6s; }
   </style>
 </head>
 
@@ -254,40 +294,52 @@
             </div>
 
             <!-- Stats Section - Layout 3x2 más compacto -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 mb-16" id="stats-section">
                 <!-- Stat 1 -->
-                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg">
-                    <h4 class="font-bold text-3xl text-orange-600 mb-2">30+</h4>
+                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg counter-box">
+                    <h4 class="font-bold text-3xl text-orange-600 mb-2">
+                        <span class="counter-value" data-target="30">0</span>+
+                    </h4>
                     <p class="text-slate-600 dark:text-slate-300 text-sm">Familias Cooperadas</p>
                 </div>
                 
                 <!-- Stat 2 -->
-                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg">
-                    <h4 class="font-bold text-3xl text-orange-600 mb-2">10</h4>
+                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg counter-box">
+                    <h4 class="font-bold text-3xl text-orange-600 mb-2">
+                        <span class="counter-value" data-target="10">0</span>
+                    </h4>
                     <p class="text-slate-600 dark:text-slate-300 text-sm">Organismos Miembros de Polo Empresarial ODS Cero</p>
                 </div>
 
                 <!-- Stat 3 -->
-                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg">
-                    <h4 class="font-bold text-3xl text-orange-600 mb-2">7</h4>
+                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg counter-box">
+                    <h4 class="font-bold text-3xl text-orange-600 mb-2">
+                        <span class="counter-value" data-target="7">0</span>
+                    </h4>
                     <p class="text-slate-600 dark:text-slate-300 text-sm">Colaboradores técnicos y profesionales nos apoyan en nuestro quehacer</p>
                 </div>
 
                 <!-- Stat 4 -->
-                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg">
-                    <h4 class="font-bold text-2xl text-orange-600 mb-2">50.000</h4>
+                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg counter-box">
+                    <h4 class="font-bold text-2xl text-orange-600 mb-2">
+                        <span class="counter-value" data-target="50000">0</span>
+                    </h4>
                     <p class="text-slate-600 dark:text-slate-300 text-sm">Familias se verán impactadas por los programas que desarrollamos en la actualidad</p>
                 </div>
 
                 <!-- Stat 5 -->
-                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg">
-                    <h4 class="font-bold text-xl text-orange-600 mb-2">M$ 30.000</h4>
+                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg counter-box">
+                    <h4 class="font-bold text-xl text-orange-600 mb-2">
+                        M$ <span class="counter-value" data-target="30000">0</span>
+                    </h4>
                     <p class="text-slate-600 dark:text-slate-300 text-sm">A la fecha nuestros socios cooperados han invertido más de 30 millones de pesos</p>
                 </div>
 
                 <!-- Stat 6 -->
-                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg">
-                    <h4 class="font-bold text-lg text-orange-600 mb-2">MUSD 100.000</h4>
+                <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow-lg counter-box">
+                    <h4 class="font-bold text-lg text-orange-600 mb-2">
+                        MUSD <span class="counter-value" data-target="100000">0</span>
+                    </h4>
                     <p class="text-slate-600 dark:text-slate-300 text-sm">Actualmente nos encontramos gestionando más de 100 millones de dólares para el crecimiento de los proyectos sostenibles</p>
                 </div>
             </div>
@@ -1290,9 +1342,7 @@ empresas cooperativas.
             <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center mb-20">
                 <div class="lg:col-span-7 lg:order-1 order-1">
                     <div class="lg:me-7 relative">
-                        <div class="aspect-square w-full overflow-hidden rounded-lg">
-                            <img src="assets/images/client/Foto7.jpg" class="w-full h-full object-cover" alt="Modelo de Sostenibilidad">
-                        </div>
+                        
                         <h6 class="text-orange-600 text-xl font-medium uppercase mb-4">MODELO DE SOSTENIBILIDAD Y REGENERACIÓN LOCAL</h6>
                         <h3 class="mb-6 md:text-3xl text-2xl font-medium dark:text-white">Innovación Social para el Desarrollo Sostenible</h3>
                         
@@ -1715,7 +1765,7 @@ empresas cooperativas.
                             </div>
                             <div class="flex-1 ms-6">
                                 <h5 class="text-lg dark:text-white mb-2 font-medium">Correo</h5>
-                                <a href="mailto:contacto@devsecup.cl" class="text-slate-400">contacto@ods.cl</a>
+                                <a href="mailto:contacto@ods.cl" class="text-slate-400">contacto@ods.cl</a>
                             </div>
                         </div>
     
