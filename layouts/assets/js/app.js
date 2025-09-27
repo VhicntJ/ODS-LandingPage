@@ -169,11 +169,11 @@ try {
 /*******************/
 $(function () {
     $('#my-whatsapp').floatingWhatsApp({
-      phone: '56971769875', // Número de WhatsApp
-      popupMessage: '¡Hola! Te gustaria tener mas informacion sobre el polo ODS 0 ? contáctanos',
+      phone: '56954689181', // Número de WhatsApp
+      popupMessage: '¡Hola! Te gustaría tener más información sobre el polo ODS 0 ? Contáctanos',
       showPopup: true,
       position: 'right',
-      autoOpenTimeout: 20000,
+      autoOpenTimeout: 25000,
       
     });
   });
