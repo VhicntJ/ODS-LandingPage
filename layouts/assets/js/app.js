@@ -381,36 +381,31 @@ try {
 
         // Segundo slider (2 items)
         if (document.getElementsByClassName('tiny-two-item-2').length > 0) {
-            var slider2 = tns({
+            var slider = tns({
                 container: '.tiny-two-item-2',
-                items: 2,
+                items: 1,
                 controls: true,
                 mouseDrag: true,
                 loop: true,
-                rewind: false,
+                rewind: true,
                 autoplay: true,
                 autoplayButtonOutput: false,
                 autoplayTimeout: 3000,
-                autoplayHoverPause: false,
                 navPosition: "bottom",
-                controlsText: ['<i class="mdi mdi-chevron-left"></i>', '<i class="mdi mdi-chevron-right"></i>'],
+                controlsText: ['<i class="mdi mdi-chevron-left "></i>', '<i class="mdi mdi-chevron-right"></i>'],
                 nav: false,
-                speed: 800,
-                gutter: 24,
-                center: true,
-                slideBy: 1,
+                speed: 400,
+                gutter: 12,
                 responsive: {
                     992: {
-                        items: 2,
-                        gutter: 24
+                        items: 2
                     },
                     767: {
-                        items: 2,
-                        gutter: 20
+                        items: 2
                     },
                     320: {
                         items: 1
-                    }
+                    },
                 }
             });
         }
