@@ -31,18 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Intentar inicializar WhatsApp después de un pequeño delay
+        // Intentar inicializar WhatsApp después de un pequeño delay usando el inicializador global
         setTimeout(() => {
             if (typeof window.forceInitWhatsApp === 'function') {
                 window.forceInitWhatsApp();
-            } else if (typeof $ !== 'undefined' && $('#my-whatsapp').length && typeof $('#my-whatsapp').floatingWhatsApp === 'function') {
-                console.log('🟢 Inicializando WhatsApp (consentimiento existente)');
-                $('#my-whatsapp').floatingWhatsApp({
-                    phone: '56954689181',
-                    popupMessage: '¡Hola! Te gustaría tener más información sobre el polo ODS 0 ? Contáctanos',
-                    showPopup: true,
-                    position: 'right'
-                });
+            } else {
+                // Si aún no está disponible, reintentar brevemente
+                const retry = setInterval(() => {
+                    if (typeof window.forceInitWhatsApp === 'function') {
+                        clearInterval(retry);
+                        window.forceInitWhatsApp();
+                    }
+                }, 500);
+                // Cortar el reintento después de 5s para evitar loops
+                setTimeout(() => clearInterval(retry), 5000);
             }
         }, 1000);
         

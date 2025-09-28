@@ -187,7 +187,12 @@ $(function () {
 
         // Verificar que el elemento exista y el plugin esté disponible
         if ($('#my-whatsapp').length && typeof $('#my-whatsapp').floatingWhatsApp === 'function') {
-            // Solo inicializar si no está ya inicializado
+            // Guard global para evitar inicializaciones duplicadas
+            if (window.__whatsappInitialized) {
+                console.log('ℹ️ WhatsApp ya fue inicializado previamente (guard global)');
+                return true;
+            }
+            // Solo inicializar si no está ya inicializado por clase del plugin
             if (!$('#my-whatsapp').hasClass('floating-wpp')) {
                 console.log('🟢 Inicializando WhatsApp widget');
                 $('#my-whatsapp').floatingWhatsApp({
@@ -196,9 +201,11 @@ $(function () {
                     showPopup: true,
                     position: 'right'
                 });
+                window.__whatsappInitialized = true;
                 return true;
             } else {
                 console.log('ℹ️ WhatsApp ya está inicializado');
+                window.__whatsappInitialized = true;
                 return true;
             }
         } else {
