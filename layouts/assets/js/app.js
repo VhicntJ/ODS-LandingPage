@@ -168,15 +168,59 @@ try {
 /* Whatsapp Button */
 /*******************/
 $(function () {
-    $('#my-whatsapp').floatingWhatsApp({
-      phone: '56954689181', // Número de WhatsApp
-      popupMessage: '¡Hola! Te gustaría tener más información sobre el polo ODS 0 ? Contáctanos',
-      showPopup: true,
-      position: 'right',
-      autoOpenTimeout: 25000,
-      
-    });
-  });
+    // Función para inicializar WhatsApp solo si no hay banner de cookies activo
+    function initWhatsApp() {
+        console.log('🔍 Verificando estado para inicialización de WhatsApp...');
+        
+        // Verificar si el banner de cookies está activo
+        if (window.cookieBannerActive === true) {
+            console.log('⏸️ WhatsApp no inicializado - Banner de cookies activo');
+            return false;
+        }
+
+        // Verificar si ya existe consentimiento
+        const consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            console.log('⏸️ WhatsApp no inicializado - Sin consentimiento de cookies');
+            return false;
+        }
+
+        // Verificar que el elemento exista y el plugin esté disponible
+        if ($('#my-whatsapp').length && typeof $('#my-whatsapp').floatingWhatsApp === 'function') {
+            // Solo inicializar si no está ya inicializado
+            if (!$('#my-whatsapp').hasClass('floating-wpp')) {
+                console.log('🟢 Inicializando WhatsApp widget');
+                $('#my-whatsapp').floatingWhatsApp({
+                    phone: '56954689181', // Número de WhatsApp
+                    popupMessage: '¡Hola! Te gustaría tener más información sobre el polo ODS 0 ? Contáctanos',
+                    showPopup: true,
+                    position: 'right'
+                });
+                return true;
+            } else {
+                console.log('ℹ️ WhatsApp ya está inicializado');
+                return true;
+            }
+        } else {
+            console.log('⚠️ Elemento #my-whatsapp no encontrado o plugin no disponible');
+            return false;
+        }
+    }
+
+    // Intentar inicializar WhatsApp inmediatamente
+    if (!initWhatsApp()) {
+        // Si falla, intentar después de un delay más largo
+        setTimeout(() => {
+            initWhatsApp();
+        }, 2000);
+    }
+    
+    // Función global para forzar inicialización (llamada desde cookie-consent.js)
+    window.forceInitWhatsApp = function() {
+        console.log('🔄 Forzando inicialización de WhatsApp...');
+        initWhatsApp();
+    };
+});
   
   
 

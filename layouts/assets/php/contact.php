@@ -51,10 +51,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Configuración del servidor SMTP
         $mail->isSMTP();
-        $mail->Host = 'mail.devsecup.cl'; // Servidor SMTP
+        $mail->Host = ''; // Servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = 'contacto@devsecup.cl'; // Tu correo SMTP
-        $mail->Password = 'x8}4>H+G3u\\RU!4285$j'; // Contraseña SMTP
+        $mail->Username = ''; // Tu correo SMTP
+        $mail->Password = ''; // Contraseña SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encriptación TLS
         $mail->Port = 587; // Puerto SMTP
 

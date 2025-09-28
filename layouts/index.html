@@ -28,6 +28,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css" media="print" onload="this.media='all'">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-15TQLEX7B1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Configuración inicial con consentimiento denegado por defecto
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+
+    gtag('config', 'G-15TQLEX7B1', {
+      // Configuración mejorada para mediciones avanzadas
+      enhanced_measurement: true,
+      page_title: true,
+      allow_google_signals: true,
+      allow_ad_personalization_signals: true
+    });
+  </script>
+  
   <noscript>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -207,20 +229,20 @@
                 <!-- Navbar Button -->
                 <ul class="list-none menu-social mb-0">
                     <li class="inline">
-                        <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'instagram_header'});">
                                 <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-instagram"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-instagram"></i></span></span>
                             </a>
                     </li>
                     
                     <li class="inline">
-                        <a href="https://www.linkedin.com/company/odscero">
+                        <a href="https://www.linkedin.com/company/odscero" onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'linkedin_header'});">
                                 <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-linkedin"></i></span></span>
                             </a>
                     </li>
                     <li class="inline">
-                        <a href="https://www.facebook.com/poloempresarial.odscero">
+                        <a href="https://www.facebook.com/poloempresarial.odscero" onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'facebook_header'});">
                                 <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-facebook"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-facebook"></i></span></span>
                             </a>
@@ -238,20 +260,20 @@
             <div class="navigation lg_992:order-1 lg_992:flex hidden" id="menu-collapse">
                 <ul class="navbar-nav nav-light" id="navbar-navlist">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">INICIO</a>
+                        <a class="nav-link active" href="#home" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'inicio'});">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicio">ACCIÓNES MÁS <br> QUE PALABRAS</a>
+                        <a class="nav-link" href="#servicio" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'acciones'});">ACCIÓNES MÁS <br> QUE PALABRAS</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#POLOS">POLOS AGROECOLÓGICOS<br> & BUEN VIVIR LOCAL</a>
+                        <a class="nav-link" href="#POLOS" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'polos'});">POLOS AGROECOLÓGICOS<br> & BUEN VIVIR LOCAL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cooperativa">COOPERATIVIZATE</a>
+                        <a class="nav-link" href="#cooperativa" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'cooperativa'});">COOPERATIVIZATE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#team">NUESTRA INSTITUCIÓN <br>Y GOBIERNO CORPORATIVO</a>
+                        <a class="nav-link" href="#team" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'team'});">NUESTRA INSTITUCIÓN <br>Y GOBIERNO CORPORATIVO</a>
                     </li>
                 </ul>
             </div>
@@ -274,7 +296,7 @@
                 <p class="text-white opacity-50 mb-0 text-lg dynamic-text">Somos un polo empresarial que agrupa asociaciones empresariales, empresas cooperativas y empresas sociales. Trabajamos con comunidades locales e inversionistas de impacto para crear condiciones que permitan la sostenibilidad y la regeneración local.</p>
 
                 <div id="servicio" class="relative mt-10">
-                    <a href="/index.html#serv" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">Ver iniciativas</a>
+                    <a href="/index.html#serv" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md" onclick="gtag('event', 'cta_hero_click', {event_category: 'engagement', event_label: 'Ver iniciativas'});">Ver iniciativas</a>
                 </div>
             </div>
         </div>
@@ -1691,7 +1713,7 @@ empresas cooperativas.
                                     <textarea name="comments" id="comments" class="form-input textarea h-28" placeholder="Mensaje :" required></textarea>
                                 </div>
                             </div>
-                            <button type="submit" id="submit" name="send" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md h-11 justify-center flex items-center ">
+                            <button type="submit" id="submit" name="send" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md h-11 justify-center flex items-center" onclick="gtag('event', 'form_submit_attempt', {event_category: 'form', event_label: 'contact_form'});">
                                 Enviar Mensaje
                             </button>
                         </form>
@@ -1714,7 +1736,7 @@ empresas cooperativas.
                             </div>
                             <div class="flex-1 ms-6">
                                 <h5 class="text-lg dark:text-white mb-2 font-medium">Correo</h5>
-                                <a href="mailto:vinculacion@odscero.cl" class="text-slate-400">vinculacion@odscero.cl</a>
+                                <a href="mailto:vinculacion@odscero.cl" class="text-slate-400" onclick="gtag('event', 'email_click', {event_category: 'engagement', event_label: 'vinculacion@odscero.cl'});">vinculacion@odscero.cl</a>
                             </div>
                         </div>
     
@@ -1796,12 +1818,14 @@ empresas cooperativas.
                     <ul class="flex flex-wrap gap-5 justify-start">
                         <li>
                             <a href="https://www.linkedin.com/company/odscero" target="_blank" rel="noopener noreferrer" 
+                               onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'linkedin_footer'});"
                                class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                                 <i class="uil uil-linkedin text-xl"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" 
+                               onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'instagram_footer'});"
                                class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                                 <i class="uil uil-instagram text-xl"></i>
                             </a>
@@ -1809,6 +1833,7 @@ empresas cooperativas.
                     
                         <li>
                             <a href="https://www.facebook.com/poloempresarial.odscero" target="_blank" rel="noopener noreferrer" 
+                               onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'facebook_footer'});"
                                class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
                                 <i class="uil uil-facebook text-xl"></i>
                             </a>
@@ -1875,6 +1900,8 @@ empresas cooperativas.
 <script src="assets/js/plugins.init.js" defer></script>
 <script src="assets/libs/toastr/toastr.min.js" defer></script>
 <script src="assets/js/app.js" defer></script>
+<script src="assets/js/cookie-consent.js" defer></script>
+<script src="assets/js/analytics-tracking.js" defer></script>
 <script src="assets/libs/whatsapp/floating-wpp-custom.js" defer></script> 
 <script>
   // Inicializar iconos de Lucide después de que se cargue la página
