@@ -383,78 +383,41 @@ toastr.options = {
     "hideMethod": "fadeOut"
 };
 
-// Tiny Slider Initialization
+// Inicialización de Tiny Slider para múltiples carruseles
 try {
-    var slider = function () {
-        // Configuración común para primer slider
-        const sliderConfig = {
-            items: 3,
-            controls: true,
-            mouseDrag: true,
-            loop: true,
-            rewind: false,
-            autoplay: true,
-            autoplayButtonOutput: false,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: false,
-            navPosition: "bottom",
-            controlsText: ['<i class="mdi mdi-chevron-left"></i>', '<i class="mdi mdi-chevron-right"></i>'],
-            nav: false,
-            speed: 800,
-            gutter: 12,
-            responsive: {
-                992: {
-                    items: 3
-                },
-                767: {
-                    items: 2
-                },
-                320: {
-                    items: 1
-                },
-            }
-        };
+  document.addEventListener('DOMContentLoaded', function () {
+    const carruseles = document.querySelectorAll('.tiny-three-item');
 
-        // Primer slider
-        if (document.getElementsByClassName('tiny-three-item').length > 0) {
-            var slider1 = tns({
-                container: '.tiny-three-item',
-                ...sliderConfig
-            });
-        }
-
-        // Segundo slider (2 items)
-        if (document.getElementsByClassName('tiny-two-item-2').length > 0) {
-            var slider = tns({
-                container: '.tiny-two-item-2',
-                items: 1,
-                controls: true,
-                mouseDrag: true,
-                loop: true,
-                rewind: true,
-                autoplay: true,
-                autoplayButtonOutput: false,
-                autoplayTimeout: 3000,
-                navPosition: "bottom",
-                controlsText: ['<i class="mdi mdi-chevron-left "></i>', '<i class="mdi mdi-chevron-right"></i>'],
-                nav: false,
-                speed: 400,
-                gutter: 12,
-                responsive: {
-                    992: {
-                        items: 2
-                    },
-                    767: {
-                        items: 2
-                    },
-                    320: {
-                        items: 1
-                    },
-                }
-            });
-        }
-    };
-    slider();
+    carruseles.forEach((el, i) => {
+      tns({
+        container: el,
+        items: 3,
+        controls: true,
+        mouseDrag: true,
+        loop: true,
+        rewind: false,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        nav: false,
+        navPosition: "bottom",
+        controlsText: [
+          '<i class="mdi mdi-chevron-left"></i>',
+          '<i class="mdi mdi-chevron-right"></i>'
+        ],
+        speed: 800,
+        gutter: 12,
+        responsive: {
+          320: { items: 1 },
+          767: { items: 2 },
+          992: { items: 3 }
+        },
+        // 👉 Alterna la dirección: par = derecha, impar = izquierda
+        autoplayDirection: i % 2 === 0 ? 'forward' : 'backward'
+      });
+    });
+  });
 } catch (error) {
-    console.log('Error initializing tiny-slider:', error);
+  console.error('Error initializing tiny-slider:', error);
 }
