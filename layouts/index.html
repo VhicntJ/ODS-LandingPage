@@ -21,6 +21,7 @@
 
   <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="stylesheet" href="assets/css/tumblr-feed.css">
   <link rel="stylesheet" href="assets/libs/whatsapp/floating-wpp.min.css" />
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" media="print" onload="this.media='all'">
@@ -274,6 +275,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#team" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'team'});">NUESTRA INSTITUCIÓN <br>Y GOBIERNO CORPORATIVO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#noticias" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'noticias'});">NOTICIAS</a>
                     </li>
                 </ul>
             </div>
@@ -1634,6 +1638,51 @@ empresas cooperativas.
     <!--end section-->
     <!-- End Nueva Sección -->
     
+    <!-- Start - Sección de Noticias Tumblr -->
+    <section class="relative md:py-24 py-16 bg-white dark:bg-slate-900 tumblr-section" id="noticias">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h6 class="text-orange-600 text-xl font-medium uppercase mb-4">Noticias y Actualizaciones</h6>
+                <h3 class="mb-6 md:text-3xl text-2xl font-medium dark:text-white">Últimas Novedades ODS Cero</h3>
+                <p class="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-lg leading-relaxed">
+                    Mantente al día con las últimas noticias, proyectos y logros de nuestra comunidad cooperativa. 
+                    Descubre cómo estamos transformando la sostenibilidad local a través de la innovación y la colaboración.
+                </p>
+            </div>
+
+            <!-- Tumblr Feed Container -->
+            <div id="tumblr-feed" class="mt-12 tumblr-fade-in">
+                <!-- El contenido se carga dinámicamente desde Tumblr -->
+            </div>
+
+            <!-- Call to Action para ver más noticias -->
+            <div class="text-center mt-12">
+                <div class="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/10 dark:to-orange-800/10 rounded-2xl p-8 border border-orange-100 dark:border-orange-900/20">
+                    <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">¿Quieres estar siempre informado?</h4>
+                    <p class="text-gray-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+                        Sigue nuestro blog en Tumblr para recibir todas las actualizaciones sobre nuestros proyectos, 
+                        eventos y las últimas novedades del mundo cooperativo y sostenible.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="https://odscero.tumblr.com" 
+                           target="_blank" 
+                           rel="noopener"
+                           onclick="gtag('event', 'external_link_click', {event_category: 'engagement', event_label: 'tumblr_blog_main'});"
+                           class="inline-flex items-center px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 group">
+                            <i data-lucide="external-link" class="w-5 h-5 mr-2"></i>
+                            Ver todas las noticias
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- End Sección de Noticias Tumblr -->
+    
     <!-- Start -->
     <section class="py-36 lg:py-64 w-full table relative bg-[url('../../assets/images/bg/1.jpg')] bg-center bg-cover">
         <div class="absolute inset-0 bg-black opacity-80"></div>
@@ -1969,6 +2018,7 @@ empresas cooperativas.
 <script src="assets/libs/tiny-slider/min/tiny-slider.js" defer></script>
 <script src="assets/js/plugins.init.js" defer></script>
 <script src="assets/libs/toastr/toastr.min.js" defer></script>
+<script src="assets/js/tumblr-feed.js" defer></script>
 <script src="assets/js/app.js" defer></script>
 <script src="assets/js/cookie-consent.js" defer></script>
 <script src="assets/js/analytics-tracking.js" defer></script>
@@ -1979,6 +2029,37 @@ empresas cooperativas.
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
+
+    // Configuración e inicialización del feed de Tumblr
+    setTimeout(() => {
+      if (typeof window.initTumblrFeed === 'function' && document.getElementById('tumblr-feed')) {
+        console.log('🚀 Inicializando feed de Tumblr ODS Cero...');
+        
+        window.initTumblrFeed({
+          // Solo consumer key público (seguro para frontend)
+          apiKey: 'PAoH5idLVQvCta6cxVwXSctjg8BvAoMGF03lG776ySZKYDZAY5',
+          blogName: 'odscero',
+          containerId: 'tumblr-feed',
+          maxPosts: 6,
+          showImages: true,
+          showDates: true,
+          compact: false,
+          // Usar proxy backend para OAuth completo (más seguro)
+                    useProxy: true,
+                    // Usa la ruta relativa al servidor PHP local o hosting
+                    proxyUrl: 'assets/php/tumblr-proxy.php',
+                    debug: true
+        });
+
+        // Analytics para el feed
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'tumblr_feed_initialized', {
+            event_category: 'engagement',
+            event_label: 'tumblr_integration'
+          });
+        }
+      }
+    }, 1500); // Delay para asegurar que todo se cargue
   });
 </script>
     <!-- JAVASCRIPTS -->

@@ -1,1 +1,20 @@
 .qodo
+
+# Configuración sensible - NO SUBIR A GITHUB
+assets/php/config.php
+*.env
+.env
+.env.local
+.env.production
+
+# Credenciales y claves API
+tumblr-credentials.json
+oauth-secrets.php
+
+# Logs sensibles
+*.log
+logs/
+
+# Cache del sistema
+cache/
+tmp/
