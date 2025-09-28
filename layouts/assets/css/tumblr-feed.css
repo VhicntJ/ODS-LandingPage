@@ -24,6 +24,15 @@
     overflow: hidden;
 }
 
+/* Permitir hasta 4 líneas para títulos largos */
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Loading animation mejorada */
 @keyframes tumblr-pulse {
     0%, 100% { 

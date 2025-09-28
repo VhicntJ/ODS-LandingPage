@@ -333,7 +333,7 @@ class TumblrFeed {
                 }
             }
         } else if (post.type === 'photo') {
-            title = post.caption ? this.stripHtml(post.caption).substring(0, 60) : 'Actualización Fotográfica';
+            title = post.caption ? this.stripHtml(post.caption).substring(0, 120) : 'Actualización Fotográfica';
             excerpt = post.caption ? this.stripHtml(post.caption).substring(0, 100) + '...' : '';
             
             // Extraer imagen de posts de foto - múltiples métodos de extracción
@@ -379,7 +379,7 @@ class TumblrFeed {
                 }
             }
         } else if (post.type === 'photoset') {
-            title = post.caption ? this.stripHtml(post.caption).substring(0, 60) : 'Galería de Fotos';
+            title = post.caption ? this.stripHtml(post.caption).substring(0, 120) : 'Galería de Fotos';
             excerpt = post.caption ? this.stripHtml(post.caption).substring(0, 100) + '...' : '';
             
             // Para photosets, usar la primera imagen del set con múltiples métodos
@@ -430,7 +430,7 @@ class TumblrFeed {
                 imageUrl = post.link_image;
             }
         } else if (post.type === 'video') {
-            title = post.caption ? this.stripHtml(post.caption).substring(0, 60) : 'Video ODS Cero';
+            title = post.caption ? this.stripHtml(post.caption).substring(0, 120) : 'Video ODS Cero';
             excerpt = post.caption ? this.stripHtml(post.caption).substring(0, 100) + '...' : '';
             
             // Para videos, buscar thumbnail en múltiples ubicaciones
@@ -656,7 +656,7 @@ class TumblrFeed {
                         </div>
                     </div>
                     
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 line-clamp-4 group-hover:text-orange-600 transition-colors">
                         <a href="${post.post_url}" 
                            target="_blank" 
                            rel="noopener"
