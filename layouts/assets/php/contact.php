@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <body>
         <div class='container'>
             <div class='header'>
-                <img src='https://devsecup.cl/assets/images/logo_cabecera_blanco_1.png' href='https://devsecup.cl' alt='Logo'>
+                <img src='https://odscero.cl/assets/images/ods0blanco.png' href='https://odscero.cl' alt='Logo'>
                 <h1>Nuevo mensaje desde el formulario</h1>
             </div>
             <div class='content'>
@@ -137,7 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>$comments</p>
             </div>
             <div class='footer'>
-                <p>https://www.devsecup.cl</p>
+                <p>https://www.odscero.cl</p>
             </div>
         </div>
     </body>
@@ -198,7 +198,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class='container'>
         <div class='header'>
-            <img src='https://devsecup.cl/assets/images/logo_cabecera_blanco_1.png' href='https://devsecup.cl' alt='Logo'>
+            <img src='https://odscero.cl/assets/images/ods0blanco.png' href='https://odscero.cl' alt='Logo'>
             <h1>¡Gracias por contactarnos!</h1>
         </div>
         <div class='content'>
@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Hemos recibido su consulta y nuestro equipo está trabajando para atenderla. Un agente se pondrá en contacto con usted lo antes posible.</p>
         </div>
         <div class='footer'>
-            <p>https://www.devsecup.cl</p>
+            <p>https://www.odscero.cl</p>
         </div>
     </div>
 </body>
