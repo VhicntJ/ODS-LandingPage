@@ -3847,10 +3847,7 @@ html[dir="rtl"] .tns-visually-hidden {
   .lg\:leading-normal {
     line-height: 1.5 !important;
   }
-  .legal-nav{
-  position: static !important;
-  top: auto !important;
-}
+  
 }
 
 /* Colores personalizados para ODS */

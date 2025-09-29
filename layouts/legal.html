@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="light scroll-smooth" dir="ltr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,27 +17,21 @@
   <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
   <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
   <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/css/tailwind.min.css">
   <link rel="stylesheet" href="assets/libs/whatsapp/floating-wpp.min.css" />
-
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-15TQLEX7B1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied'
-    });
-
+    gtag('consent', 'default', { 'analytics_storage': 'denied' });
     gtag('config', 'G-15TQLEX7B1', {
       enhanced_measurement: true,
       page_title: true,
@@ -46,8 +39,8 @@
       allow_ad_personalization_signals: true
     });
   </script>
-  
-  <!-- Overrides de color cooperativa (celeste) -->
+
+  <!-- Overrides de color cooperativa (celeste) y estilos legales -->
   <style>
     :root {
       --celeste-600: #2ABAEB;
@@ -55,905 +48,668 @@
       --celeste-600-rgb: 42 186 235;
       --celeste-700-rgb: 34 159 204;
     }
-
-    .bg-orange-600,
-    .bg-pink-600,
-    .bg-sky-600 {
-      background-color: var(--celeste-600) !important;
-    }
-
-    .hover\:bg-orange-700:hover,
-    .hover\:bg-pink-600:hover,
-    .hover\:bg-sky-600:hover,
-    .dark\:hover\:bg-orange-700:hover,
-    .dark\:hover\:bg-pink-600:hover,
-    .dark\:hover\:bg-sky-600:hover {
-      background-color: var(--celeste-700) !important;
-    }
-
-    .text-orange-600,
-    .text-pink-600,
-    .text-sky-600 {
-      color: var(--celeste-600) !important;
-    }
-
-    .hover\:text-orange-600:hover,
-    .hover\:text-pink-600:hover,
-    .hover\:text-sky-600:hover {
-      color: var(--celeste-700) !important;
-    }
-
-    .border-orange-600,
-    .border-pink-600,
-    .border-sky-600 {
-      border-color: var(--celeste-600) !important;
-    }
-
-    .hover\:border-orange-700:hover {
-      border-color: var(--celeste-700) !important;
-    }
+    .bg-orange-600, .bg-pink-600, .bg-sky-600 { background-color: var(--celeste-600) !important; }
+    .hover\:bg-orange-700:hover, .hover\:bg-pink-600:hover, .hover\:bg-sky-600:hover,
+    .dark\:hover\:bg-orange-700:hover, .dark\:hover\:bg-pink-600:hover, .dark\:hover\:bg-sky-600:hover { background-color: var(--celeste-700) !important; }
+    .text-orange-600, .text-pink-600, .text-sky-600 { color: var(--celeste-600) !important; }
+    .hover\:text-orange-600:hover, .hover\:text-pink-600:hover, .hover\:text-sky-600:hover { color: var(--celeste-700) !important; }
+    .border-orange-600, .border-pink-600, .border-sky-600 { border-color: var(--celeste-600) !important; }
+    .hover\:border-orange-700:hover { border-color: var(--celeste-700) !important; }
 
     /* Estilos específicos para la página legal */
-    .legal-content {
-      line-height: 1.8;
-      font-size: 1rem;
-    }
+    .legal-content { line-height: 1.8; font-size: 1rem; }
+    .legal-content h2 { color: var(--celeste-600); margin-top: 3rem; margin-bottom: 2rem; font-weight: 600; font-size: 1.75rem; }
+    .legal-content h3 { color: var(--celeste-700); margin-top: 2.5rem; margin-bottom: 1.5rem; font-weight: 600; font-size: 1.375rem; }
+    .legal-content p { margin-bottom: 1.5rem; text-align: justify; }
+    .legal-content ul, .legal-content ol { margin: 1.5rem 0; padding-left: 2rem; }
+    .legal-content li { margin-bottom: 0.75rem; line-height: 1.7; }
+    .legal-content table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+    .legal-content th, .legal-content td { border: 1px solid #e2e8f0; padding: 1rem; text-align: left; }
+    .legal-content th { background-color: #f1f5f9; font-weight: 600; }
 
-    .legal-content h2 {
-      color: var(--celeste-600);
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-      font-weight: 600;
-      font-size: 1.75rem;
-    }
-
-    .legal-content h3 {
-      color: var(--celeste-700);
-      margin-top: 2.5rem;
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-      font-size: 1.375rem;
-    }
-
-    .legal-content p {
-      margin-bottom: 1.5rem;
-      text-align: justify;
-    }
-
-    .legal-content ul, .legal-content ol {
-      margin: 1.5rem 0;
-      padding-left: 2rem;
-    }
-
-    .legal-content li {
-      margin-bottom: 0.75rem;
-      line-height: 1.7;
-    }
-
-    .legal-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-    }
-
-    .legal-content th, .legal-content td {
-      border: 1px solid #e2e8f0;
-      padding: 1rem;
-      text-align: left;
-    }
-
-    .legal-content th {
-      background-color: #f1f5f9;
-      font-weight: 600;
-    }
-
-    /* Responsive typography */
     @media (min-width: 1024px) {
-      .legal-content {
-        font-size: 1.125rem;
-        line-height: 1.9;
-      }
-      
-      .legal-content h2 {
-        font-size: 2rem;
-        margin-top: 4rem;
-        margin-bottom: 2.5rem;
-      }
-      
-      .legal-content h3 {
-        font-size: 1.5rem;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-      }
-      
-      .legal-content p {
-        margin-bottom: 2rem;
-      }
-      
-      .legal-content ul, .legal-content ol {
-        margin: 2rem 0;
-      }
-      
-      .legal-content li {
-        margin-bottom: 1rem;
-      }
+      .legal-content { font-size: 1.125rem; line-height: 1.9; }
+      .legal-content h2 { font-size: 2rem; margin-top: 4rem; margin-bottom: 2.5rem; }
+      .legal-content h3 { font-size: 1.5rem; margin-top: 3rem; margin-bottom: 2rem; }
+      .legal-content p { margin-bottom: 2rem; }
+      .legal-content ul, .legal-content ol { margin: 2rem 0; }
+      .legal-content li { margin-bottom: 1rem; }
     }
 
-    /* Navegación sticky */
+    /* ▼ CAMBIO: Navegación NO sticky en móvil; sticky solo en desktop */
     .legal-nav {
-      position: sticky;
-      top: 80px;
+      position: static;        /* móvil/tablet normal */
       background: white;
       border-radius: 0.5rem;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       padding: 1.5rem;
       margin-bottom: 2rem;
       z-index: 10;
+      border: 1px solid #e2e8f0;
     }
-
-    .dark .legal-nav {
-      background: #1e293b;
-      border: 1px solid #334155;
+    @media (min-width: 1024px) {
+      .legal-nav {
+        position: sticky;      /* sticky en desktop */
+        top: 96px;             /* ajusta según alto de tu navbar */
+        max-height: calc(100vh - 8rem);
+        overflow: auto;        /* evita que tape contenido si es muy larga */
+      }
     }
-
+    .dark .legal-nav { background: #1e293b; border: 1px solid #334155; }
     .legal-nav a {
-      display: block;
-      padding: 0.75rem 1rem;
-      margin: 0.25rem 0;
-      border-radius: 0.375rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      color: #475569;
+      display: block; padding: 0.75rem 1rem; margin: 0.25rem 0; border-radius: 0.375rem;
+      transition: all 0.3s ease; text-decoration: none; color: #475569;
     }
-
-    .dark .legal-nav a {
-      color: #cbd5e1;
-    }
-
-    .legal-nav a:hover, .legal-nav a.active {
-      background-color: var(--celeste-600);
-      color: white;
-      transform: translateX(0.25rem);
-    }
+    .dark .legal-nav a { color: #cbd5e1; }
+    .legal-nav a:hover, .legal-nav a.active { background-color: var(--celeste-600); color: white; transform: translateX(0.25rem); }
 
     /* Smooth scrolling offset para sticky navbar */
-    .legal-section {
-      scroll-margin-top: 120px;
-    }
+    .legal-section { scroll-margin-top: 120px; }
 
     /* Botón back to top personalizado */
-    #back-to-top.bg-orange-600 {
-      background-color: var(--celeste-600) !important;
-    }
-
-    #back-to-top.hover\:bg-orange-700:hover {
-      background-color: var(--celeste-700) !important;
-    }
-
-    /* Iconos sociales */
-    .btn.btn-icon.bg-orange-600,
-    .btn.btn-sm.btn-icon.bg-orange-600,
-    .rounded-full.bg-orange-600 {
-      background-color: var(--celeste-600) !important;
-    }
-
-    .btn.btn-icon.hover\:bg-orange-700:hover,
-    .btn.btn-sm.btn-icon.hover\:bg-orange-700:hover,
-    .rounded-full.hover\:bg-orange-700:hover {
-      background-color: var(--celeste-700) !important;
-    }
-
-        /* Navbar: usar estilos globales con clase is-sticky */
-        /* Sin overrides locales para mantener consistencia con index */
+    #back-to-top.bg-orange-600 { background-color: var(--celeste-600) !important; }
+    #back-to-top.hover\:bg-orange-700:hover { background-color: var(--celeste-700) !important; }
   </style>
 </head>
 
 <body class="font-rubik text-base text-slate-900 dark:text-white dark:bg-slate-900">
 
-    <!-- Navbar Start -->
-    <nav class="navbar is-sticky" id="navbar">
-        <div class="container flex flex-wrap items-center justify-end">
-            <a class="navbar-brand" href="index.html">
-                <span class="inline-block dark:hidden">
-                    <img src="assets/images/ods0.png" class="l-dark" alt="">
-                    <img src="assets/images/ods0blanco.png" class="l-light" alt="">
-                </span>
-                <img src="assets/images/ods0blanco.png" class="hidden dark:inline-block" alt="">
+  <!-- Navbar Start -->
+  <nav class="navbar is-sticky" id="navbar">
+    <div class="container flex flex-wrap items-center justify-end">
+      <a class="navbar-brand" href="index.html">
+        <span class="inline-block dark:hidden">
+          <img src="assets/images/ods0.png" class="l-dark" alt="">
+          <img src="assets/images/ods0blanco.png" class="l-light" alt="">
+        </span>
+        <img src="assets/images/ods0blanco.png" class="hidden dark:inline-block" alt="">
+      </a>
+
+      <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
+        <!-- Redes -->
+        <ul class="list-none menu-social mb-0">
+          <li class="inline">
+            <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" onclick="gtag('event','social_media_click',{event_category:'social',event_label:'instagram_header'});">
+              <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-instagram"></i></span></span>
+              <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-instagram"></i></span></span>
             </a>
+          </li>
+          <li class="inline">
+            <a href="https://www.linkedin.com/company/odscero" onclick="gtag('event','social_media_click',{event_category:'social',event_label:'linkedin_header'});">
+              <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
+              <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-linkedin"></i></span></span>
+            </a>
+          </li>
+          <li class="inline">
+            <a href="https://www.facebook.com/poloempresarial.odscero" onclick="gtag('event','social_media_click',{event_category:'social',event_label:'facebook_header'});">
+              <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-facebook"></i></span></span>
+              <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-facebook"></i></span></span>
+            </a>
+          </li>
+        </ul>
 
-            <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
-                <!-- Navbar Button -->
-                <ul class="list-none menu-social mb-0">
-                    <li class="inline">
-                        <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'instagram_header'});">
-                            <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-instagram"></i></span></span>
-                            <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-instagram"></i></span></span>
-                        </a>
-                    </li>
-                    
-                    <li class="inline">
-                        <a href="https://www.linkedin.com/company/odscero" onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'linkedin_header'});">
-                            <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
-                            <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-linkedin"></i></span></span>
-                        </a>
-                    </li>
-                    <li class="inline">
-                        <a href="https://www.facebook.com/poloempresarial.odscero" onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'facebook_header'});">
-                            <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-facebook"></i></span></span>
-                            <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-facebook"></i></span></span>
-                        </a>
-                    </li>
-                </ul>
-                <!-- Navbar Collapse Menu Button -->
-                <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ms-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false">
-                    <span class="sr-only">Menu de Navegacion</span>
-                    <i class="mdi mdi-menu mdi-24px"></i>
-                </button>
-            </div>
+        <!-- Hamburguesa -->
+        <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ms-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false">
+          <span class="sr-only">Menu de Navegacion</span>
+          <i class="mdi mdi-menu mdi-24px"></i>
+        </button>
+      </div>
 
-            <!-- Navbar Menu -->
-            <div class="navigation lg_992:order-1 lg_992:flex hidden" id="menu-collapse">
-                <ul class="navbar-nav nav-light" id="navbar-navlist">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'inicio'});">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#servicio" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'acciones'});">ACCIÓNES MÁS <br> QUE PALABRAS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#POLOS" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'polos'});">LÍNEAS DE<br> ACCIÓN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#cooperativa" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'cooperativa'});">COOPERATIVIZATE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#team" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'team'});">NUESTRA INSTITUCIÓN <br>Y GOBIERNO CORPORATIVO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#noticias" onclick="gtag('event', 'navigation_click', {event_category: 'navigation', event_label: 'noticias'});">NOTICIAS</a>
-                    </li>
-                </ul>
-            </div>
+      <!-- Navbar Menu -->
+      <div class="navigation lg_992:order-1 lg_992:flex hidden" id="menu-collapse">
+        <ul class="navbar-nav nav-light" id="navbar-navlist">
+          <li class="nav-item"><a class="nav-link" href="index.html" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'inicio'});">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#servicio" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'acciones'});">ACCIÓNES MÁS <br> QUE PALABRAS</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#POLOS" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'polos'});">LÍNEAS DE<br> ACCIÓN</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#cooperativa" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'cooperativa'});">COOPERATIVIZATE</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#team" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'team'});">NUESTRA INSTITUCIÓN <br>Y GOBIERNO CORPORATIVO</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#noticias" onclick="gtag('event','navigation_click',{event_category:'navigation',event_label:'noticias'});">NOTICIAS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Spacer debajo del navbar -->
+  <div aria-hidden="true" class="h-64 lg:h-48"></div>
+
+  <!-- Hero Start -->
+  <section class="pt-28 pb-12 lg:pt-32 lg:pb-16 w-full table relative bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-900 dark:to-slate-800" id="home">
+    <div class="container relative">
+      <div class="grid grid-cols-1 text-center">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-slate-900 dark:text-white lg:text-4xl text-3xl lg:leading-normal leading-normal font-bold mb-6">Información Legal</h1>
+          <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-8">
+            Aquí encontrarás toda la información legal relevante sobre el uso de nuestro sitio web, 
+            políticas de privacidad, cookies y nuestro compromiso con la accesibilidad digital.
+          </p>
+
+          <!-- Breadcrumb -->
+          <nav class="flex justify-center mb-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+              <li class="inline-flex items-center">
+                <a href="index.html" class="text-gray-700 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-500 transition-colors">
+                  <i data-lucide="home" class="w-4 h-4 mr-2"></i>Inicio
+                </a>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                  <span class="ml-1 md:ml-2 text-gray-500 dark:text-gray-400">Información Legal</span>
+                </div>
+              </li>
+            </ol>
+          </nav>
         </div>
-    </nav>
-    <!-- Navbar End -->
-    
-    <!-- Spacer: ensures content sits below sticky navbar -->
-    <div aria-hidden="true" class="h-64 lg:h-48"></div>
-    
-    <!-- Hero Start -->
-    <section class="pt-28 pb-12 lg:pt-32 lg:pb-16 w-full table relative bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-900 dark:to-slate-800" id="home">
-        <div class="container relative">
-            <div class="grid grid-cols-1 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <h1 class="text-slate-900 dark:text-white lg:text-4xl text-3xl lg:leading-normal leading-normal font-bold mb-6">
-                        Información Legal
-                    </h1>
-                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-8">
-                        Aquí encontrarás toda la información legal relevante sobre el uso de nuestro sitio web, 
-                        políticas de privacidad, cookies y nuestro compromiso con la accesibilidad digital.
-                    </p>
-                    
-                    <!-- Breadcrumb -->
-                    <nav class="flex justify-center mb-8" aria-label="Breadcrumb">
-                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                            <li class="inline-flex items-center">
-                                <a href="index.html" class="text-gray-700 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-500 transition-colors">
-                                    <i data-lucide="home" class="w-4 h-4 mr-2"></i>
-                                    Inicio
-                                </a>
-                            </li>
-                            <li>
-                                <div class="flex items-center">
-                                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
-                                    <span class="ml-1 md:ml-2 text-gray-500 dark:text-gray-400">Información Legal</span>
-                                </div>
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero End -->
+
+  <!-- Legal Content Start -->
+  <section class="relative md:py-16 py-12">
+    <div class="container">
+
+      <!-- ▼ CAMBIO: Grid con sidebar a la derecha en desktop -->
+      <div class="grid gap-8 lg:grid-cols-12">
+        
+        <!-- Contenido principal -->
+        <div class="legal-content prose prose-slate max-w-none order-2 lg:order-1 lg:col-span-8">
+          
+          <!-- Política de Privacidad -->
+          <div id="privacidad" class="legal-section">
+            <h2 class="flex items-center">
+              <i data-lucide="shield-check" class="w-8 h-8 mr-3 text-orange-600"></i>
+              Política de Privacidad
+            </h2>
+
+            <h3>1.1 Introducción</h3>
+            <p>
+              En ODS Cero (en adelante "nosotros", "el Sitio", "ODS Cero") respetamos la privacidad de las personas que visitan y utilizan nuestro sitio web, y nos comprometemos a proteger los datos personales que nos proporcionen. Esta Política de Privacidad describe qué datos se recopilan, con qué finalidad, bajo qué bases legales, cómo se utilizan, con quién se comparten, y qué derechos tienen los usuarios conforme a la normativa chilena relevante (por ejemplo, la Ley 19.628 sobre protección de la vida privada) y buenas prácticas internacionales (como el GDPR europeo, en lo que resulte aplicable como estándar de referencia).
+            </p>
+
+            <h3>1.2 Datos que podemos recopilar</h3>
+            <p>Podemos recopilar los siguientes tipos de datos personales cuando un usuario interactúa con nuestro sitio:</p>
+            <ul>
+              <li><strong>Datos de contacto:</strong> nombre, correo electrónico, teléfono, dirección postal.</li>
+              <li><strong>Datos identificativos:</strong> RUT u otros identificadores, si es requerido para servicios específicos.</li>
+              <li><strong>Datos de uso:</strong> dirección IP, tipo de navegador, sistema operativo, páginas visitadas, tiempo de permanencia, páginas de origen y destino, fecha y hora de acceso.</li>
+              <li><strong>Datos de comunicaciones:</strong> mensajes enviados a través de formularios de contacto, chat, correo electrónico, encuestas.</li>
+              <li><strong>Datos financieros o transaccionales:</strong> cuando contratas un servicio, podemos requerir información de pago, facturación, historial de pagos.</li>
+              <li><strong>Datos adicionales:</strong> cuando voluntariamente los proporciones (por ejemplo, perfil profesional, sector, intereses, redes sociales).</li>
+            </ul>
+
+            <h3>1.3 Finalidades del tratamiento</h3>
+            <p>Los datos recabados pueden ser utilizados para:</p>
+            <ul>
+              <li>Proveer, mantener, administrar y mejorar nuestros servicios/proyectos.</li>
+              <li>Atender tus consultas, solicitudes, contrataciones o pedidos.</li>
+              <li>Enviar comunicaciones (notificaciones, newsletters, actualizaciones, promociones) cuando hayas dado consentimiento o exista una relación contractual.</li>
+              <li>Realizar análisis estadísticos, métricos y de uso del sitio web para optimizar el diseño, funcionalidad y contenido.</li>
+              <li>Cumplir deberes legales, fiscales o contables aplicables.</li>
+              <li>Detectar y prevenir fraudes o usos indebidos del sitio.</li>
+              <li>Proteger nuestros derechos y seguridad.</li>
+            </ul>
+
+            <h3>1.4 Base legal del tratamiento</h3>
+            <p>Dependiendo del caso, utilizamos alguna de estas bases legales:</p>
+            <ul>
+              <li><strong>Consentimiento explícito:</strong> cuando el usuario acepta expresamente (por ejemplo, para recibir newsletters).</li>
+              <li><strong>Ejecución de un contrato:</strong> cuando los datos se necesiten para cumplir con servicios solicitados por el usuario.</li>
+              <li><strong>Cumplimiento legal:</strong> para obligaciones fiscales, contables u otras exigidas por ley.</li>
+              <li><strong>Interés legítimo:</strong> en análisis estadísticos internos, prevención de fraudes, mejoras del sitio, siempre que no prevalezcan derechos del titular del dato.</li>
+            </ul>
+
+            <h3>1.5 Conservación de los datos</h3>
+            <p>
+              Conservaremos los datos personales solo durante el tiempo necesario para cumplir con las finalidades descritas, o por períodos que exija la legislación aplicable (por ejemplo, plazos de archivo contable). Cuando ya no sean necesarios, los suprimiremos o anonimizaremos de forma segura.
+            </p>
+
+            <h3>1.6 Destinatarios y transferencia de datos</h3>
+            <p>Los datos pueden ser compartidos con:</p>
+            <ul>
+              <li>Proveedores de infraestructura, hosting, servicios en la nube, procesamiento de pagos, email marketing, análisis de datos, etc.</li>
+              <li>Autoridades competentes cuando exista obligación legal.</li>
+              <li>En caso de fusión, adquisición u operación corporativa, los datos podrían transferirse a la entidad adquirente bajo condiciones de protección similares.</li>
+            </ul>
+            <p>
+              En caso de transferencias internacionales de datos (por ejemplo, servidores fuera de Chile), garantizamos que se realicen con mecanismos adecuados (cláusulas contractuales estándar, garantías de protección de datos, etc.).
+            </p>
+
+            <h3>1.7 Derechos de los titulares</h3>
+            <p>Los usuarios tienen derechos sobre sus datos personales, tales como:</p>
+            <ul>
+              <li><strong>Acceso:</strong> conocer qué datos les hemos recopilado.</li>
+              <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+              <li><strong>Supresión (derecho al olvido):</strong> solicitar eliminar datos cuando ya no sean necesarios.</li>
+              <li><strong>Oposición:</strong> oponerse a ciertos tratamientos (por ejemplo, marketing).</li>
+              <li><strong>Limitación del tratamiento:</strong> pedir que sólo sean tratados para ciertos fines.</li>
+              <li><strong>Portabilidad:</strong> recibir los datos en formato estructurado (cuando aplicable).</li>
+              <li><strong>Retiro del consentimiento</strong> cuando el tratamiento se base en él.</li>
+            </ul>
+            <p>
+              Para ejercer estos derechos, el usuario puede contactarnos a través del correo electrónico 
+              <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a> 
+              o mediante el formulario de contacto. Respondemos en plazos razonables conforme exige la normativa chilena.
+            </p>
+
+            <h3>1.8 Seguridad</h3>
+            <p>
+              Adoptamos medidas técnicas y organizativas adecuadas (encriptación, control de accesos, respaldo seguro, servidores protegidos, protocolos TLS/SSL) para proteger los datos frente a accesos no autorizados, destrucción, pérdida o alteraciones.
+            </p>
+
+            <h3>1.9 Modificaciones a la política</h3>
+            <p>
+              Podemos actualizar esta Política de Privacidad. Cuando lo hagamos, informaremos mediante aviso visible en el sitio web o por correo electrónico. La versión vigente siempre estará disponible en el sitio.
+            </p>
+
+            <h3>1.10 Responsable del tratamiento</h3>
+            <div class="bg-gray-50 dark:bg-slate-800 rounded-lg p-4 my-4">
+              <p><strong>Datos del responsable:</strong></p>
+              <p>ODS Cero<br>
+              Correo de contacto: <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a></p>
             </div>
+
+            <h3>2. Política de Cookies (y otros mecanismos de rastreo)</h3>
+
+            <h3>2.1 ¿Qué son las cookies y tecnologías similares?</h3>
+            <p>
+              Las cookies son archivos de texto que se almacenan en el dispositivo del usuario (ordenador, móvil) cuando visita un sitio web. También pueden emplearse otras tecnologías de rastreo como balizas (web beacons), almacenamiento local (localStorage), pixels, scripts de terceros, etc.
+            </p>
+
+            <h3>2.2 Tipos de cookies que utilizamos</h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full">
+                <thead>
+                  <tr><th>Tipo</th><th>Finalidad</th><th>Naturaleza</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Cookies esenciales / necesarias</td><td>Permiten el funcionamiento básico del sitio (por ejemplo, sesión, autenticación)</td><td>Persistentes o de sesión</td></tr>
+                  <tr><td>Cookies de funcionalidad</td><td>Permiten recordar preferencias (idioma, diseño, configuración)</td><td>Persistentes</td></tr>
+                  <tr><td>Cookies de rendimiento / analíticas</td><td>Recogen información sobre el uso del sitio (páginas vistas, errores) para mejorar la experiencia</td><td>Generalmente anónimas o agregadas</td></tr>
+                  <tr><td>Cookies de marketing / publicidad</td><td>Permiten ofrecer publicidad personalizada, medir la eficacia de campañas</td><td>Pueden ser de terceros</td></tr>
+                  <tr><td>Cookies de redes sociales / integración externa</td><td>Para componentes externos integrados (botones compartir, plugins sociales)</td><td>Terceros</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>2.3 Uso específico en ODS Cero</h3>
+            <p>Algunos ejemplos concretos:</p>
+            <ul>
+              <li>Google Analytics para medir tráfico y comportamiento de usuarios.</li>
+              <li>Cookies de sesión propias para formularios y preferencias de usuario.</li>
+              <li>Scripts integrados de terceros (redes sociales, mapas) que podrían generar cookies propias.</li>
+            </ul>
+
+            <h3>2.4 Gestión y consentimiento</h3>
+            <p>
+              Antes de instalar cookies no esenciales (analíticas, marketing, etc.), solicitamos el consentimiento explícito mediante un banner de cookies. El usuario puede:
+            </p>
+            <ul>
+              <li>Aceptar todas las cookies.</li>
+              <li>Rechazar las cookies no esenciales (solo mantener esenciales).</li>
+              <li>Configurar individualmente qué tipos permite.</li>
+            </ul>
+            <p>
+              El usuario puede revocar o modificar su consentimiento en cualquier momento mediante la configuración de cookies o ajustes del navegador.
+            </p>
+
+            <h3>2.5 Cómo controlar cookies desde el navegador</h3>
+            <p>
+              Los usuarios pueden gestionar o eliminar cookies desde sus navegadores (Chrome, Firefox, Safari, Edge). Al eliminar cookies, algunas funciones del sitio podrían no funcionar correctamente.
+            </p>
+
+            <h3>2.6 Periodo de conservación</h3>
+            <p>Los plazos varían según el tipo:</p>
+            <ul>
+              <li>Cookies de sesión: expiran al cerrar el navegador</li>
+              <li>Cookies analíticas: pueden conservarse por 2 años</li>
+              <li>Cookies de marketing: generalmente por 1 año</li>
+            </ul>
+
+            <h3>2.7 Cambios en la política de cookies</h3>
+            <p>
+              Cuando se realicen modificaciones, se informará oportunamente, y se solicitará nuevo consentimiento si cambia el uso de cookies.
+            </p>
+          </div>
+
+          <!-- Declaración de Accesibilidad -->
+          <div id="accesibilidad" class="legal-section">
+            <h2 class="flex items-center">
+              <i data-lucide="accessibility" class="w-8 h-8 mr-3 text-orange-600"></i>
+              Declaración de Accesibilidad
+            </h2>
+
+            <h3>3.1 Nuestro compromiso con la accesibilidad</h3>
+            <p>
+              ODS Cero se compromete a garantizar que nuestro sitio web sea accesible para todas las personas, incluidas aquellas con discapacidades. Trabajamos continuamente para mejorar la accesibilidad y usabilidad de nuestro sitio web y cumplir con los estándares y pautas establecidos.
+            </p>
+
+            <h3>3.2 Estándares de accesibilidad</h3>
+            <p>
+              Nuestro sitio web se esfuerza por cumplir con las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1 en el nivel AA. Estas pautas explican cómo hacer que el contenido web sea más accesible para las personas con discapacidades.
+            </p>
+
+            <h3>3.3 Medidas implementadas</h3>
+            <p>Hemos implementado las siguientes medidas para mejorar la accesibilidad:</p>
+            <ul>
+              <li>Estructura HTML semántica y navegación consistente</li>
+              <li>Texto alternativo descriptivo para todas las imágenes</li>
+              <li>Contraste de color adecuado entre texto y fondo</li>
+              <li>Navegación accesible mediante teclado</li>
+              <li>Formularios con etiquetas claras y descriptivas</li>
+              <li>Tamaños de fuente escalables y legibles</li>
+              <li>Evitar el uso exclusivo del color para transmitir información</li>
+              <li>Contenido multimedia con alternativas textuales cuando es posible</li>
+            </ul>
+
+            <h3>3.4 Tecnologías de asistencia</h3>
+            <p>Compatibilidad con:</p>
+            <ul>
+              <li>Lectores de pantalla (NVDA, JAWS, VoiceOver)</li>
+              <li>Navegación por teclado</li>
+              <li>Software de reconocimiento de voz</li>
+              <li>Herramientas de ampliación de pantalla</li>
+            </ul>
+
+            <h3>3.5 Limitaciones conocidas</h3>
+            <p>Áreas a mejorar:</p>
+            <ul>
+              <li>Algunos contenidos de terceros pueden no ser completamente accesibles</li>
+              <li>Archivos PDF antiguos pueden requerir actualización para mejorar la accesibilidad</li>
+              <li>Algunos elementos multimedia pueden no tener transcripciones completas</li>
+            </ul>
+
+            <h3>3.6 Comentarios y contacto</h3>
+            <p>
+              Valoramos sus comentarios sobre la accesibilidad de nuestro sitio web. Si encuentra barreras de accesibilidad o tiene sugerencias de mejora, por favor contáctenos:
+            </p>
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 my-4">
+              <p><strong>Contacto para accesibilidad:</strong></p>
+              <p>Correo: <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a><br>
+              Asunto: "Consulta de Accesibilidad Web"</p>
+            </div>
+
+            <h3>3.7 Proceso de mejora continua</h3>
+            <p>Implementamos mejoras basadas en:</p>
+            <ul>
+              <li>Comentarios de usuarios</li>
+              <li>Auditorías de accesibilidad regulares</li>
+              <li>Actualizaciones de estándares y mejores prácticas</li>
+              <li>Pruebas con usuarios con discapacidades</li>
+            </ul>
+          </div>
+
+          <!-- Derechos de Autor -->
+          <div id="derechos-autor" class="legal-section">
+            <h2 class="flex items-center">
+              <i data-lucide="copyright" class="w-8 h-8 mr-3 text-orange-600"></i>
+              Políticas de Derechos de Autor
+            </h2>
+
+            <h3>4.1 Propiedad intelectual</h3>
+            <p>
+              Todos los contenidos presentes en este sitio web, incluyendo pero no limitándose a textos, imágenes, gráficos, logotipos, iconos, fotografías, videos, audio, diseños, código fuente, estructura del sitio y selección y disposición de los mismos, están protegidos por derechos de autor y otras leyes de propiedad intelectual.
+            </p>
+
+            <h3>4.2 Titularidad de los derechos</h3>
+            <p>Los derechos de propiedad intelectual sobre el contenido de este sitio web pertenecen a:</p>
+            <ul>
+              <li><strong>ODS Cero:</strong> para contenido original creado por nuestra organización</li>
+              <li><strong>Terceros:</strong> para contenido licenciado o utilizado con autorización</li>
+              <li><strong>Dominio público:</strong> para contenido libre de derechos</li>
+              <li><strong>Creative Commons:</strong> para contenido bajo estas licencias específicas</li>
+            </ul>
+
+            <h3>4.3 Uso permitido</h3>
+            <p>Se permite el uso del contenido de este sitio web para:</p>
+            <ul>
+              <li><strong>Uso personal:</strong> navegación, lectura y descarga para uso personal no comercial</li>
+              <li><strong>Uso educativo:</strong> citas y referencias académicas con atribución apropiada</li>
+              <li><strong>Uso informativo:</strong> compartir enlaces y menciones en redes sociales y otros medios</li>
+              <li><strong>Fines periodísticos:</strong> uso de información pública con atribución adecuada</li>
+            </ul>
+
+            <h3>4.4 Usos prohibidos</h3>
+            <p>Queda expresamente prohibido:</p>
+            <ul>
+              <li>Reproducir, copiar, distribuir o transmitir cualquier contenido sin autorización previa</li>
+              <li>Modificar, alterar o crear obras derivadas del contenido</li>
+              <li>Usar el contenido con fines comerciales sin licencia</li>
+              <li>Remover o alterar avisos de derechos de autor o marcas de propiedad</li>
+              <li>Hacer ingeniería inversa del código fuente del sitio</li>
+              <li>Usar contenido para crear sitios web competidores</li>
+            </ul>
+
+            <h3>4.5 Solicitar permisos</h3>
+            <p>Para usos que excedan lo permitido, solicitar autorización previa:</p>
+            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 my-4">
+              <p><strong>Solicitudes de licencia:</strong></p>
+              <p>Correo: <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a><br>
+              Asunto: "Solicitud de Licencia de Uso - Derechos de Autor"<br>
+              Incluir: descripción del uso previsto, duración, alcance geográfico</p>
+            </div>
+
+            <h3>4.6 Contenido de terceros</h3>
+            <p>Contenido sujeto a condiciones de terceros:</p>
+            <ul>
+              <li><strong>Imágenes de stock</strong> bajo licencia</li>
+              <li><strong>Iconos y gráficos</strong> con licencias específicas</li>
+              <li><strong>Fuentes tipográficas</strong> con sus propias licencias</li>
+              <li><strong>Plugins y librerías</strong> open source</li>
+            </ul>
+
+            <h3>4.7 Procedimiento de notificación DMCA</h3>
+            <p>Si su obra ha sido utilizada indebidamente, notificar con:</p>
+            <ol>
+              <li>Identificación de la obra</li>
+              <li>Material que infringe</li>
+              <li>Contacto del titular</li>
+              <li>Declaración de buena fe</li>
+              <li>Declaración de veracidad</li>
+              <li>Firma física/electrónica</li>
+            </ol>
+
+            <h3>4.8 Marcas comerciales</h3>
+            <p>
+              Las marcas, logotipos y nombres comerciales mostrados en este sitio son propiedad de ODS Cero o de sus respectivos propietarios. Su uso sin autorización está prohibido.
+            </p>
+
+            <h3>4.9 Enlaces y referencias</h3>
+            <p>Es permitido enlazar a nuestro sitio siempre que:</p>
+            <ul>
+              <li>No sugieran afiliación sin autorización</li>
+              <li>No usen técnicas de framing</li>
+              <li>No presenten contenido de forma engañosa</li>
+              <li>Cumplan con términos y condiciones</li>
+            </ul>
+
+            <h3>4.10 Modificaciones</h3>
+            <p>
+              Nos reservamos el derecho de modificar estas políticas en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación.
+            </p>
+          </div>
+
         </div>
-    </section>
-    <!-- Hero End -->
 
-    <!-- Legal Content Start -->
-    <section class="relative md:py-16 py-12">
-        <div class="container">
-            <!-- Navegación superior -->
-            <div class="legal-nav !static mb-8">
-                        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center">
-                            <i data-lucide="bookmark" class="w-5 h-5 mr-2 text-orange-600"></i>
-                            Navegación
-                        </h3>
-                        <nav class="space-y-2">
-                            <a href="#privacidad" class="legal-nav-link" onclick="gtag('event', 'legal_navigation', {event_category: 'engagement', event_label: 'privacidad'});">
-                                <i data-lucide="shield-check" class="w-4 h-4 mr-2 inline-block"></i>
-                                Política de Privacidad
-                            </a>
-                            <a href="#accesibilidad" class="legal-nav-link" onclick="gtag('event', 'legal_navigation', {event_category: 'engagement', event_label: 'accesibilidad'});">
-                                <i data-lucide="accessibility" class="w-4 h-4 mr-2 inline-block"></i>
-                                Declaración de Accesibilidad
-                            </a>
-                            <a href="#derechos-autor" class="legal-nav-link" onclick="gtag('event', 'legal_navigation', {event_category: 'engagement', event_label: 'derechos_autor'});">
-                                <i data-lucide="copyright" class="w-4 h-4 mr-2 inline-block"></i>
-                                Derechos de Autor
-                            </a>
-                        </nav>
-                        
-                        <!-- Última actualización -->
-                        <div class="mt-6 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
-                            <p class="text-sm text-orange-800 dark:text-orange-200 flex items-center">
-                                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
-                                Última actualización: <span class="font-medium ml-1" id="last-updated"></span>
-                            </p>
-                        </div>
+        <!-- Sidebar derecha -->
+        <aside class="order-1 lg:order-2 lg:col-span-4">
+          <div class="legal-nav">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center">
+              <i data-lucide="bookmark" class="w-5 h-5 mr-2 text-orange-600"></i>
+              Navegación
+            </h3>
+            <nav class="space-y-2">
+              <a href="#privacidad" class="legal-nav-link">
+                <i data-lucide="shield-check" class="w-4 h-4 mr-2 inline-block"></i>Política de Privacidad
+              </a>
+              <a href="#accesibilidad" class="legal-nav-link">
+                <i data-lucide="accessibility" class="w-4 h-4 mr-2 inline-block"></i>Declaración de Accesibilidad
+              </a>
+              <a href="#derechos-autor" class="legal-nav-link">
+                <i data-lucide="copyright" class="w-4 h-4 mr-2 inline-block"></i>Derechos de Autor
+              </a>
+            </nav>
+            <!-- Última actualización -->
+            <div class="mt-6 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
+              <p class="text-sm text-orange-800 dark:text-orange-200 flex items-center">
+                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                Última actualización: <span class="font-medium ml-1" id="last-updated"></span>
+              </p>
             </div>
+          </div>
+        </aside>
 
-            <!-- Contenido Principal en una columna -->
-            <div class="legal-content prose prose-slate max-w-none">
-                        
-                        <!-- Política de Privacidad -->
-                        <div id="privacidad" class="legal-section">
-                            <h2 class="flex items-center">
-                                <i data-lucide="shield-check" class="w-8 h-8 mr-3 text-orange-600"></i>
-                                Política de Privacidad
-                            </h2>
+      </div>
+      <!-- ▲ FIN CAMBIO -->
+    </div>
+  </section>
+  <!-- Legal Content End -->
 
-                            <h3>1.1 Introducción</h3>
-                            <p>
-                                En ODS Cero (en adelante "nosotros", "el Sitio", "ODS Cero") respetamos la privacidad de las personas que visitan y utilizan nuestro sitio web, y nos comprometemos a proteger los datos personales que nos proporcionen. Esta Política de Privacidad describe qué datos se recopilan, con qué finalidad, bajo qué bases legales, cómo se utilizan, con quién se comparten, y qué derechos tienen los usuarios conforme a la normativa chilena relevante (por ejemplo, la Ley 19.628 sobre protección de la vida privada) y buenas prácticas internacionales (como el GDPR europeo, en lo que resulte aplicable como estándar de referencia).
-                            </p>
-
-                            <h3>1.2 Datos que podemos recopilar</h3>
-                            <p>Podemos recopilar los siguientes tipos de datos personales cuando un usuario interactúa con nuestro sitio:</p>
-                            <ul>
-                                <li><strong>Datos de contacto:</strong> nombre, correo electrónico, teléfono, dirección postal.</li>
-                                <li><strong>Datos identificativos:</strong> RUT u otros identificadores, si es requerido para servicios específicos.</li>
-                                <li><strong>Datos de uso:</strong> dirección IP, tipo de navegador, sistema operativo, páginas visitadas, tiempo de permanencia, páginas de origen y destino, fecha y hora de acceso.</li>
-                                <li><strong>Datos de comunicaciones:</strong> mensajes enviados a través de formularios de contacto, chat, correo electrónico, encuestas.</li>
-                                <li><strong>Datos financieros o transaccionales:</strong> cuando contratas un servicio, podemos requerir información de pago, facturación, historial de pagos.</li>
-                                <li><strong>Datos adicionales:</strong> cuando voluntariamente los proporciones (por ejemplo, perfil profesional, sector, intereses, redes sociales).</li>
-                            </ul>
-
-                            <h3>1.3 Finalidades del tratamiento</h3>
-                            <p>Los datos recabados pueden ser utilizados para:</p>
-                            <ul>
-                                <li>Proveer, mantener, administrar y mejorar nuestros servicios/proyectos.</li>
-                                <li>Atender tus consultas, solicitudes, contrataciones o pedidos.</li>
-                                <li>Enviar comunicaciones (notificaciones, newsletters, actualizaciones, promociones) cuando hayas dado consentimiento o exista una relación contractual.</li>
-                                <li>Realizar análisis estadísticos, métricos y de uso del sitio web para optimizar el diseño, funcionalidad y contenido.</li>
-                                <li>Cumplir deberes legales, fiscales o contables aplicables.</li>
-                                <li>Detectar y prevenir fraudes o usos indebidos del sitio.</li>
-                                <li>Proteger nuestros derechos y seguridad.</li>
-                            </ul>
-
-                            <h3>1.4 Base legal del tratamiento</h3>
-                            <p>Dependiendo del caso, utilizamos alguna de estas bases legales:</p>
-                            <ul>
-                                <li><strong>Consentimiento explícito:</strong> cuando el usuario acepta expresamente (por ejemplo, para recibir newsletters).</li>
-                                <li><strong>Ejecución de un contrato:</strong> cuando los datos se necesiten para cumplir con servicios solicitados por el usuario.</li>
-                                <li><strong>Cumplimiento legal:</strong> para obligaciones fiscales, contables u otras exigidas por ley.</li>
-                                <li><strong>Interés legítimo:</strong> en análisis estadísticos internos, prevención de fraudes, mejoras del sitio, siempre que no prevalezcan derechos del titular del dato.</li>
-                            </ul>
-
-                            <h3>1.5 Conservación de los datos</h3>
-                            <p>
-                                Conservaremos los datos personales solo durante el tiempo necesario para cumplir con las finalidades descritas, o por períodos que exija la legislación aplicable (por ejemplo, plazos de archivo contable). Cuando ya no sean necesarios, los suprimiremos o anonimizaremos de forma segura.
-                            </p>
-
-                            <h3>1.6 Destinatarios y transferencia de datos</h3>
-                            <p>Los datos pueden ser compartidos con:</p>
-                            <ul>
-                                <li>Proveedores de infraestructura, hosting, servicios en la nube, procesamiento de pagos, email marketing, análisis de datos, etc.</li>
-                                <li>Autoridades competentes cuando exista obligación legal.</li>
-                                <li>En caso de fusión, adquisición u operación corporativa, los datos podrían transferirse a la entidad adquirente bajo condiciones de protección similares.</li>
-                            </ul>
-                            <p>
-                                En caso de transferencias internacionales de datos (por ejemplo, servidores fuera de Chile), garantizamos que se realicen con mecanismos adecuados (cláusulas contractuales estándar, garantías de protección de datos, etc.).
-                            </p>
-
-                            <h3>1.7 Derechos de los titulares</h3>
-                            <p>Los usuarios tienen derechos sobre sus datos personales, tales como:</p>
-                            <ul>
-                                <li><strong>Acceso:</strong> conocer qué datos les hemos recopilado.</li>
-                                <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
-                                <li><strong>Supresión (derecho al olvido):</strong> solicitar eliminar datos cuando ya no sean necesarios.</li>
-                                <li><strong>Oposición:</strong> oponerse a ciertos tratamientos (por ejemplo, marketing).</li>
-                                <li><strong>Limitación del tratamiento:</strong> pedir que sólo sean tratados para ciertos fines.</li>
-                                <li><strong>Portabilidad:</strong> recibir los datos en formato estructurado (cuando aplicable).</li>
-                                <li><strong>Retiro del consentimiento</strong> cuando el tratamiento se base en él.</li>
-                            </ul>
-                            <p>
-                                Para ejercer estos derechos, el usuario puede contactarnos a través del correo electrónico 
-                                <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a> 
-                                o mediante el formulario de contacto. Respondemos en plazos razonables conforme exige la normativa chilena.
-                            </p>
-
-                            <h3>1.8 Seguridad</h3>
-                            <p>
-                                Adoptamos medidas técnicas y organizativas adecuadas (encriptación, control de accesos, respaldo seguro, servidores protegidos, protocolos TLS/SSL) para proteger los datos frente a accesos no autorizados, destrucción, pérdida o alteraciones.
-                            </p>
-
-                            <h3>1.9 Modificaciones a la política</h3>
-                            <p>
-                                Podemos actualizar esta Política de Privacidad. Cuando lo hagamos, informaremos mediante aviso visible en el sitio web o por correo electrónico. La versión vigente siempre estará disponible en el sitio.
-                            </p>
-
-                            <h3>1.10 Responsable del tratamiento</h3>
-                            <div class="bg-gray-50 dark:bg-slate-800 rounded-lg p-4 my-4">
-                                <p><strong>Datos del responsable:</strong></p>
-                                <p>ODS Cero<br>
-                                Correo de contacto: <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a></p>
-                            </div>
-
-                            <h3>2. Política de Cookies (y otros mecanismos de rastreo)</h3>
-
-                            <h3>2.1 ¿Qué son las cookies y tecnologías similares?</h3>
-                            <p>
-                                Las cookies son archivos de texto que se almacenan en el dispositivo del usuario (ordenador, móvil) cuando visita un sitio web. También pueden emplearse otras tecnologías de rastreo como balizas (web beacons), almacenamiento local (localStorage), pixels, scripts de terceros, etc.
-                            </p>
-
-                            <h3>2.2 Tipos de cookies que utilizamos</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full">
-                                    <thead>
-                                        <tr>
-                                            <th>Tipo</th>
-                                            <th>Finalidad</th>
-                                            <th>Naturaleza</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Cookies esenciales / necesarias</td>
-                                            <td>Permiten el funcionamiento básico del sitio (por ejemplo, sesión, autenticación)</td>
-                                            <td>Persistentes o de sesión</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cookies de funcionalidad</td>
-                                            <td>Permiten recordar preferencias (idioma, diseño, configuración)</td>
-                                            <td>Persistentes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cookies de rendimiento / analíticas</td>
-                                            <td>Recogen información sobre el uso del sitio (páginas vistas, errores) para mejorar la experiencia</td>
-                                            <td>Generalmente anónimas o agregadas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cookies de marketing / publicidad</td>
-                                            <td>Permiten ofrecer publicidad personalizada, medir la eficacia de campañas</td>
-                                            <td>Pueden ser de terceros</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cookies de redes sociales / integración externa</td>
-                                            <td>Para componentes externos integrados (botones compartir, plugins sociales)</td>
-                                            <td>Terceros</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h3>2.3 Uso específico en ODS Cero</h3>
-                            <p>Algunos ejemplos concretos:</p>
-                            <ul>
-                                <li>Google Analytics para medir tráfico y comportamiento de usuarios.</li>
-                                <li>Cookies de sesión propias para formularios y preferencias de usuario.</li>
-                                <li>Scripts integrados de terceros (redes sociales, mapas) que podrían generar cookies propias.</li>
-                            </ul>
-
-                            <h3>2.4 Gestión y consentimiento</h3>
-                            <p>
-                                Antes de instalar cookies no esenciales (analíticas, marketing, etc.), solicitamos el consentimiento explícito mediante un banner de cookies. El usuario puede:
-                            </p>
-                            <ul>
-                                <li>Aceptar todas las cookies.</li>
-                                <li>Rechazar las cookies no esenciales (solo mantener esenciales).</li>
-                                <li>Configurar individualmente qué tipos permite.</li>
-                            </ul>
-                            <p>
-                                El usuario puede revocar o modificar su consentimiento en cualquier momento mediante la configuración de cookies o ajustes del navegador.
-                            </p>
-
-                            <h3>2.5 Cómo controlar cookies desde el navegador</h3>
-                            <p>
-                                Los usuarios pueden gestionar o eliminar cookies desde sus navegadores (Chrome, Firefox, Safari, Edge). Al eliminar cookies, algunas funciones del sitio podrían no funcionar correctamente.
-                            </p>
-
-                            <h3>2.6 Periodo de conservación</h3>
-                            <p>Los plazos varían según el tipo:</p>
-                            <ul>
-                                <li>Cookies de sesión: expiran al cerrar el navegador</li>
-                                <li>Cookies analíticas: pueden conservarse por 2 años</li>
-                                <li>Cookies de marketing: generalmente por 1 año</li>
-                            </ul>
-
-                            <h3>2.7 Cambios en la política de cookies</h3>
-                            <p>
-                                Cuando se realicen modificaciones, se informará oportunamente, y se solicitará nuevo consentimiento si cambia el uso de cookies.
-                            </p>
-                        </div>
-
-                        <!-- Declaración de Accesibilidad -->
-                        <div id="accesibilidad" class="legal-section">
-                            <h2 class="flex items-center">
-                                <i data-lucide="accessibility" class="w-8 h-8 mr-3 text-orange-600"></i>
-                                Declaración de Accesibilidad
-                            </h2>
-
-                            <h3>3.1 Nuestro compromiso con la accesibilidad</h3>
-                            <p>
-                                ODS Cero se compromete a garantizar que nuestro sitio web sea accesible para todas las personas, incluidas aquellas con discapacidades. Trabajamos continuamente para mejorar la accesibilidad y usabilidad de nuestro sitio web y cumplir con los estándares y pautas establecidos.
-                            </p>
-
-                            <h3>3.2 Estándares de accesibilidad</h3>
-                            <p>
-                                Nuestro sitio web se esfuerza por cumplir con las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1 en el nivel AA. Estas pautas explican cómo hacer que el contenido web sea más accesible para las personas con discapacidades.
-                            </p>
-
-                            <h3>3.3 Medidas implementadas</h3>
-                            <p>Hemos implementado las siguientes medidas para mejorar la accesibilidad:</p>
-                            <ul>
-                                <li>Estructura HTML semántica y navegación consistente</li>
-                                <li>Texto alternativo descriptivo para todas las imágenes</li>
-                                <li>Contraste de color adecuado entre texto y fondo</li>
-                                <li>Navegación accesible mediante teclado</li>
-                                <li>Formularios con etiquetas claras y descriptivas</li>
-                                <li>Tamaños de fuente escalables y legibles</li>
-                                <li>Evitar el uso exclusivo del color para transmitir información</li>
-                                <li>Contenido multimedia con alternativas textuales cuando es posible</li>
-                            </ul>
-
-                            <h3>3.4 Tecnologías de asistencia</h3>
-                            <p>
-                                Nuestro sitio web es compatible con las siguientes tecnologías de asistencia:
-                            </p>
-                            <ul>
-                                <li>Lectores de pantalla (NVDA, JAWS, VoiceOver)</li>
-                                <li>Navegación por teclado</li>
-                                <li>Software de reconocimiento de voz</li>
-                                <li>Herramientas de ampliación de pantalla</li>
-                            </ul>
-
-                            <h3>3.5 Limitaciones conocidas</h3>
-                            <p>
-                                A pesar de nuestros esfuerzos, pueden existir algunas limitaciones. Estamos trabajando para abordar las siguientes áreas:
-                            </p>
-                            <ul>
-                                <li>Algunos contenidos de terceros pueden no ser completamente accesibles</li>
-                                <li>Archivos PDF antiguos pueden requerir actualización para mejorar la accesibilidad</li>
-                                <li>Algunos elementos multimedia pueden no tener transcripciones completas</li>
-                            </ul>
-
-                            <h3>3.6 Comentarios y contacto</h3>
-                            <p>
-                                Valoramos sus comentarios sobre la accesibilidad de nuestro sitio web. Si encuentra barreras de accesibilidad o tiene sugerencias de mejora, por favor contáctenos:
-                            </p>
-                            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 my-4">
-                                <p><strong>Contacto para accesibilidad:</strong></p>
-                                <p>Correo: <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a><br>
-                                Asunto: "Consulta de Accesibilidad Web"</p>
-                            </div>
-
-                            <h3>3.7 Proceso de mejora continua</h3>
-                            <p>
-                                La accesibilidad es un proceso continuo. Realizamos evaluaciones periódicas de nuestro sitio web y implementamos mejoras basadas en:
-                            </p>
-                            <ul>
-                                <li>Comentarios de usuarios</li>
-                                <li>Auditorías de accesibilidad regulares</li>
-                                <li>Actualizaciones de estándares y mejores prácticas</li>
-                                <li>Pruebas con usuarios con discapacidades</li>
-                            </ul>
-                        </div>
-
-                        <!-- Derechos de Autor -->
-                        <div id="derechos-autor" class="legal-section">
-                            <h2 class="flex items-center">
-                                <i data-lucide="copyright" class="w-8 h-8 mr-3 text-orange-600"></i>
-                                Políticas de Derechos de Autor
-                            </h2>
-
-                            <h3>4.1 Propiedad intelectual</h3>
-                            <p>
-                                Todos los contenidos presentes en este sitio web, incluyendo pero no limitándose a textos, imágenes, gráficos, logotipos, iconos, fotografías, videos, audio, diseños, código fuente, estructura del sitio y selección y disposición de los mismos, están protegidos por derechos de autor y otras leyes de propiedad intelectual.
-                            </p>
-
-                            <h3>4.2 Titularidad de los derechos</h3>
-                            <p>
-                                Los derechos de propiedad intelectual sobre el contenido de este sitio web pertenecen a:
-                            </p>
-                            <ul>
-                                <li><strong>ODS Cero:</strong> para contenido original creado por nuestra organización</li>
-                                <li><strong>Terceros:</strong> para contenido licenciado o utilizado con autorización</li>
-                                <li><strong>Dominio público:</strong> para contenido libre de derechos</li>
-                                <li><strong>Creative Commons:</strong> para contenido bajo estas licencias específicas</li>
-                            </ul>
-
-                            <h3>4.3 Uso permitido</h3>
-                            <p>Se permite el uso del contenido de este sitio web para:</p>
-                            <ul>
-                                <li><strong>Uso personal:</strong> navegación, lectura y descarga para uso personal no comercial</li>
-                                <li><strong>Uso educativo:</strong> citas y referencias académicas con atribución apropiada</li>
-                                <li><strong>Uso informativo:</strong> compartir enlaces y menciones en redes sociales y otros medios</li>
-                                <li><strong>Fines periodísticos:</strong> uso de información pública con atribución adecuada</li>
-                            </ul>
-
-                            <h3>4.4 Usos prohibidos</h3>
-                            <p>Queda expresamente prohibido:</p>
-                            <ul>
-                                <li>Reproducir, copiar, distribuir o transmitir cualquier contenido sin autorización previa</li>
-                                <li>Modificar, alterar o crear obras derivadas del contenido</li>
-                                <li>Usar el contenido con fines comerciales sin licencia</li>
-                                <li>Remover o alterar avisos de derechos de autor o marcas de propiedad</li>
-                                <li>Hacer ingeniería inversa del código fuente del sitio</li>
-                                <li>Usar contenido para crear sitios web competidores</li>
-                            </ul>
-
-                            <h3>4.5 Solicitar permisos</h3>
-                            <p>
-                                Para usos que excedan lo permitido en esta política, debe solicitar autorización previa contactando:
-                            </p>
-                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 my-4">
-                                <p><strong>Solicitudes de licencia:</strong></p>
-                                <p>Correo: <a href="mailto:vinculacion@odscero.cl" class="text-orange-600 hover:text-orange-700">vinculacion@odscero.cl</a><br>
-                                Asunto: "Solicitud de Licencia de Uso - Derechos de Autor"<br>
-                                Incluir: descripción del uso previsto, duración, alcance geográfico</p>
-                            </div>
-
-                            <h3>4.6 Contenido de terceros</h3>
-                            <p>
-                                Algunos contenidos pueden pertenecer a terceros y estar sujetos a sus propias condiciones de uso:
-                            </p>
-                            <ul>
-                                <li><strong>Imágenes de stock:</strong> utilizadas bajo licencia comercial</li>
-                                <li><strong>Iconos y gráficos:</strong> pueden tener licencias específicas</li>
-                                <li><strong>Fuentes tipográficas:</strong> sujetas a sus propias licencias</li>
-                                <li><strong>Plugins y librerías:</strong> con licencias open source específicas</li>
-                            </ul>
-
-                            <h3>4.7 Procedimiento de notificación DMCA</h3>
-                            <p>
-                                Si cree que su obra protegida por derechos de autor ha sido utilizada de manera que constituye una infracción, puede notificarnos proporcionando:
-                            </p>
-                            <ol>
-                                <li>Identificación de la obra protegida por derechos de autor</li>
-                                <li>Identificación del material que infringe</li>
-                                <li>Información de contacto del titular de los derechos</li>
-                                <li>Declaración de buena fe</li>
-                                <li>Declaración de veracidad bajo pena de perjurio</li>
-                                <li>Firma física o electrónica del titular autorizado</li>
-                            </ol>
-
-                            <h3>4.8 Marcas comerciales</h3>
-                            <p>
-                                Las marcas, logotipos y nombres comerciales mostrados en este sitio son propiedad de ODS Cero o de sus respectivos propietarios. Su uso sin autorización está prohibido.
-                            </p>
-
-                            <h3>4.9 Enlaces y referencias</h3>
-                            <p>
-                                Es permitido crear enlaces a nuestro sitio web, siempre que:
-                            </p>
-                            <ul>
-                                <li>No sugieran afiliación, patrocinio o aprobación sin autorización</li>
-                                <li>No utilicen técnicas de enmarcado (framing) o métodos similares</li>
-                                <li>No presenten nuestro contenido de manera engañosa</li>
-                                <li>Cumplan con nuestros términos y condiciones generales</li>
-                            </ul>
-
-                            <h3>4.10 Modificaciones</h3>
-                            <p>
-                                Nos reservamos el derecho de modificar estas políticas de derechos de autor en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación en el sitio web.
-                            </p>
-                        </div>
-
-            </div>
+  <!-- Start Footer -->
+  <footer class="py-12 bg-slate-800 dark:bg-gray-900">
+    <div class="container">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 mb-8">
+        <div class="lg:col-span-1">
+          <a href="index.html" class="logo-footer block mb-4">
+            <img src="assets/images/Icono_Coop.jpg" class="mx-auto lg:mx-0 h-12" alt="Logo ODS Cero">
+          </a>
+          <p class="text-gray-400 text-sm leading-relaxed">Cooperación, innovación e ingeniería para la sostenibilidad y regeneración local.</p>
         </div>
-    </section>
-    <!-- Legal Content End -->
 
-    <!-- Start Footer -->
-    <footer class="py-12 bg-slate-800 dark:bg-gray-900">
-        <div class="container">
-            <!-- Sección principal del footer -->
-            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 mb-8">
-                <!-- Logo y descripción -->
-                <div class="lg:col-span-1">
-                    <a href="index.html" class="logo-footer block mb-4">
-                        <img src="assets/images/Icono_Coop.jpg" class="mx-auto lg:mx-0 h-12" alt="Logo ODS Cero">
-                    </a>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Cooperación, innovación e ingeniería para la sostenibilidad y regeneración local.
-                    </p>
-                </div>
-
-                <!-- Ubicación -->
-                <div class="lg:col-span-1">
-                    <h6 class="text-white font-medium mb-4 text-lg">Ubicación</h6>
-                    <div class="flex items-start space-x-3">
-                        <i class="uil uil-map-marker text-orange-600 text-xl mt-1"></i>
-                        <div>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Av. Santa Rosa 11.315, La Pintana<br>
-                                Santiago de Chile
-                            </p>
-                            <p class="text-gray-400 text-sm mt-2 font-medium">
-                                Facultad de Ciencias Agronómicas<br>
-                                Universidad de Chile
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Enlaces legales -->
-                <div class="lg:col-span-1">
-                    <h6 class="text-white font-medium mb-4 text-lg">Información Legal</h6>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#accesibilidad" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">
-                                Declaración de Accesibilidad
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#privacidad" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">
-                                Políticas de Privacidad
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#derechos-autor" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">
-                                Políticas de Derechos de Autor
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Redes sociales -->
-                <div class="lg:col-span-1">
-                    <h6 class="text-white font-medium mb-4 text-lg">Síguenos</h6>
-                    <ul class="flex flex-wrap gap-5 justify-start">
-                        <li>
-                            <a href="https://www.linkedin.com/company/odscero" target="_blank" rel="noopener noreferrer" 
-                               onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'linkedin_footer'});"
-                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
-                                <i class="uil uil-linkedin text-xl"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" 
-                               onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'instagram_footer'});"
-                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
-                                <i class="uil uil-instagram text-xl"></i>
-                            </a>
-                        </li>
-                    
-                        <li>
-                            <a href="https://www.facebook.com/poloempresarial.odscero" target="_blank" rel="noopener noreferrer" 
-                               onclick="gtag('event', 'social_media_click', {event_category: 'social', event_label: 'facebook_footer'});"
-                               class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
-                                <i class="uil uil-facebook text-xl"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="lg:col-span-1">
+          <h6 class="text-white font-medium mb-4 text-lg">Ubicación</h6>
+          <div class="flex items-start space-x-3">
+            <i class="uil uil-map-marker text-orange-600 text-xl mt-1"></i>
+            <div>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Av. Santa Rosa 11.315, La Pintana<br>Santiago de Chile
+              </p>
+              <p class="text-gray-400 text-sm mt-2 font-medium">
+                Facultad de Ciencias Agronómicas<br>Universidad de Chile
+              </p>
             </div>
-
-            <!-- Línea separadora -->
-            <div class="border-t border-slate-700 dark:border-gray-800 pt-6">
-                <!-- Copyright -->
-                <div class="text-center">
-                    <p class="text-gray-400 text-sm">
-                        © <span id="current-year"></span> Todos los contenidos de este sitio son Derechos Reservados de 
-                        <span class="text-orange-600 font-medium">Fundación Polo Empresarial ODS Cero</span>
-                    </p>
-                </div>
-            </div>
+          </div>
         </div>
-    </footer>
 
-    <!-- Back to top -->
-    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-50 bottom-5 end-5 h-9 w-9 text-center bg-orange-600 text-white leading-9">
-        <i class="uil uil-arrow-up"></i>
-    </a>
+        <div class="lg:col-span-1">
+          <h6 class="text-white font-medium mb-4 text-lg">Información Legal</h6>
+          <ul class="space-y-3">
+            <li><a href="#accesibilidad" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">Declaración de Accesibilidad</a></li>
+            <li><a href="#privacidad" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">Políticas de Privacidad</a></li>
+            <li><a href="#derechos-autor" class="text-gray-400 hover:text-orange-600 transition-colors duration-300 text-sm">Políticas de Derechos de Autor</a></li>
+          </ul>
+        </div>
 
-    <!-- JAVASCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js" defer></script>
-    <script src="assets/js/plugins.init.js" defer></script>
-    <script src="assets/js/app.js" defer></script>
-    <script src="assets/js/cookie-consent.js" defer></script>
-    <script src="assets/js/analytics-tracking.js" defer></script>
-    <script>
-        // Inicializar iconos de Lucide
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
+        <div class="lg:col-span-1">
+          <h6 class="text-white font-medium mb-4 text-lg">Síguenos</h6>
+          <ul class="flex flex-wrap gap-5 justify-start">
+            <li><a href="https://www.linkedin.com/company/odscero" target="_blank" rel="noopener noreferrer" onclick="gtag('event','social_media_click',{event_category:'social',event_label:'linkedin_footer'});" class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"><i class="uil uil-linkedin text-xl"></i></a></li>
+            <li><a href="https://www.instagram.com/odscero" target="_blank" rel="noopener noreferrer" onclick="gtag('event','social_media_click',{event_category:'social',event_label:'instagram_footer'});" class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"><i class="uil uil-instagram text-xl"></i></a></li>
+            <li><a href="https://www.facebook.com/poloempresarial.odscero" target="_blank" rel="noopener noreferrer" onclick="gtag('event','social_media_click',{event_category:'social',event_label:'facebook_footer'});" class="w-12 h-12 mr-2 bg-slate-700 hover:bg-sky-600 text-gray-400 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"><i class="uil uil-facebook text-xl"></i></a></li>
+          </ul>
+        </div>
+      </div>
 
-            // Establecer año actual
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-            document.getElementById('last-updated').textContent = new Date().toLocaleDateString('es-CL');
+      <div class="border-t border-slate-700 dark:border-gray-800 pt-6">
+        <div class="text-center">
+          <p class="text-gray-400 text-sm">
+            © <span id="current-year"></span> Todos los contenidos de este sitio son Derechos Reservados de 
+            <span class="text-orange-600 font-medium">Fundación Polo Empresarial ODS Cero</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-            // Navegación smooth scroll con offset para navbar sticky
-            function smoothScrollTo(targetId) {
-                const element = document.getElementById(targetId);
-                if (element) {
-                    const offsetTop = element.offsetTop - 120; // Compensar navbar + nav lateral
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            }
+  <!-- Back to top -->
+  <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-50 bottom-5 end-5 h-9 w-9 text-center bg-orange-600 text-white leading-9">
+    <i class="uil uil-arrow-up"></i>
+  </a>
 
-            // Manejar clics en navegación
-            document.querySelectorAll('.legal-nav-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    smoothScrollTo(targetId);
-                    
-                    // Actualizar estado activo
-                    document.querySelectorAll('.legal-nav-link').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
+  <!-- JAVASCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js" defer></script>
+  <script src="assets/js/plugins.init.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/cookie-consent.js" defer></script>
+  <script src="assets/js/analytics-tracking.js" defer></script>
+  <script>
+    // Inicializar iconos de Lucide y utilidades
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined') { lucide.createIcons(); }
 
-            // Detectar sección activa al hacer scroll
-            function updateActiveSection() {
-                const sections = document.querySelectorAll('.legal-section');
-                const navLinks = document.querySelectorAll('.legal-nav-link');
-                
-                let activeSection = '';
-                const scrollPosition = window.scrollY + 150;
+      // Año actual y última actualización
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      document.getElementById('last-updated').textContent = new Date().toLocaleDateString('es-CL');
 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        activeSection = section.id;
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + activeSection) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            // Scroll spy
-            window.addEventListener('scroll', updateActiveSection);
-            updateActiveSection(); // Ejecutar al cargar
-
-            // Manejar enlaces desde URL con hash
-            if (window.location.hash) {
-                setTimeout(() => {
-                    const targetId = window.location.hash.substring(1);
-                    smoothScrollTo(targetId);
-                }, 500);
-            }
-        });
-
-        // Función para back to top (reutilizada de app.js)
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+      // Smooth scroll con offset (ajustado para sticky sidebar)
+      function smoothScrollTo(targetId) {
+        const element = document.getElementById(targetId);
+        if (element) {
+          const offsetTop = element.offsetTop - 120; // compensa navbar y sidebar
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
         }
+      }
 
-        // Mostrar/ocultar botón back to top
-        window.addEventListener('scroll', function() {
-            const backToTop = document.getElementById('back-to-top');
-            
-            // Back to top
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                backToTop.classList.remove('hidden');
-            } else {
-                backToTop.classList.add('hidden');
-            }
+      // Clicks navegación lateral
+      document.querySelectorAll('.legal-nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          smoothScrollTo(targetId);
+          document.querySelectorAll('.legal-nav-link').forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
         });
-    </script>
-</body>
+      });
 
+      // Scroll spy
+      function updateActiveSection() {
+        const sections = document.querySelectorAll('.legal-section');
+        const navLinks = document.querySelectorAll('.legal-nav-link');
+        let activeSection = '';
+        const scrollPosition = window.scrollY + 150;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            activeSection = section.id;
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + activeSection) {
+            link.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', updateActiveSection);
+      updateActiveSection();
+
+      // Si llega con hash
+      if (window.location.hash) {
+        setTimeout(() => {
+          const targetId = window.location.hash.substring(1);
+          smoothScrollTo(targetId);
+        }, 500);
+      }
+    });
+
+    // Back to top
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    window.addEventListener('scroll', function() {
+      const backToTop = document.getElementById('back-to-top');
+      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        backToTop.classList.remove('hidden');
+      } else {
+        backToTop.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
 </html>
