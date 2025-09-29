@@ -51,16 +51,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Configuración del servidor SMTP
         $mail->isSMTP();
-        $mail->Host = ''; // Servidor SMTP
+        $mail->Host = 'smtp.titan.email'; // Servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = ''; // Tu correo SMTP
-        $mail->Password = ''; // Contraseña SMTP
+        $mail->Username = 'vinculacion@odscero.cl'; // Tu correo SMTP
+        $mail->Password = 'Yi#wCC7[vs2cigS'; // Contraseña SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encriptación TLS
-        $mail->Port = 587; // Puerto SMTP
+        $mail->Port = 587; // Puerto SMTP  
 
         // Configuración del correo
-        $mail->setFrom("contacto@devsecup.cl", "Formulario de contacto"); // Remitente
-        $mail->addAddress('contacto@devsecup.cl', 'Destinatario'); // Destinatario principal
+        $mail->setFrom("vinculacion@odscero.cl", "Formulario de contacto"); // Remitente
+        $mail->addAddress('vinculacion@odscero.cl', 'Destinatario'); // Destinatario principal
         $mail->addAddress('vhicntjulio@gmail.com', 'Copia'); // Destinatario principal
         $mail->addReplyTo($email, $name); // Responder al remitente
 
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             .header {
                 text-align: center; /* Centrar contenido */
-                background-color: #ea580c; /* Color de fondo */
+                background-color: #2ABAEB; /* Color de fondo */
                 padding: 15px;
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
@@ -169,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         .header {
             text-align: center; /* Centrar contenido */
-            background-color: #ea580c; /* Color de fondo */
+            background-color: #2ABAEB; /* Color de fondo */
             padding: 15px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
