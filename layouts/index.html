@@ -24,6 +24,10 @@
   <link rel="stylesheet" href="assets/css/tumblr-feed.css">
   <link rel="stylesheet" href="assets/libs/whatsapp/floating-wpp.min.css" />
 
+  <!-- 🚀 Preload critical carousel images for better performance -->
+  <link rel="preload" as="image" href="assets/images/client/Foto16.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/client/Foto5.jpg" fetchpriority="high">
+  
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/1.2.5/spinkit.min.css" media="print" onload="this.media='all'">
@@ -206,6 +210,52 @@
     .counter-box:nth-child(4) { animation-delay: 0.4s; }
     .counter-box:nth-child(5) { animation-delay: 0.5s; }
     .counter-box:nth-child(6) { animation-delay: 0.6s; }
+
+    /* Estilos para carruseles uniformes - Optimizado para rendimiento */
+    .carousel-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0.375rem;
+      transition: transform 0.25s ease-out; /* 🚀 Reducido a 0.25s para transiciones más rápidas */
+      will-change: transform; /* 🚀 Optimización GPU para smooth animations */
+      backface-visibility: hidden; /* 🚀 Mejora suavidad en webkit */
+      transform: translateZ(0); /* 🚀 Forzar aceleración hardware */
+    }
+
+    .carousel-image:hover {
+      transform: scale(1.03) translateZ(0); /* 🚀 Reducido a 1.03 para menor impacto y mantener hardware acceleration */
+    }
+
+    /* Asegurar contenedor de imagen consistente - Optimizado */
+    .carousel-container {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      border-radius: 0.375rem;
+      background-color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      contain: layout style paint; /* 🚀 CSS containment para mejorar rendimiento */
+    }
+
+    .dark .carousel-container {
+      background-color: #1e293b;
+    }
+
+    /* 🚀 Optimización para tiny-slider containers */
+    .tiny-three-item {
+      will-change: transform;
+      contain: layout;
+    }
+
+    /* 🚀 Reducir repaints en slides */
+    .tiny-slide {
+      will-change: auto;
+      transform: translateZ(0);
+    }
   </style>
 </head>
 
@@ -815,26 +865,30 @@ Impactos.</p>
                 <div class="tiny-three-item">
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto16.jpg" alt="Proyecto Agrovoltaico 1">
-                           
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto16.jpg" alt="Proyecto Agrovoltaico 1" loading="eager">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto21.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto21.jpg" alt="Proyecto Agrovoltaico 2" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto22.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto22.jpg" alt="Proyecto Agrovoltaico 3" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto23.jpg" alt="Proyecto Agrovoltaico 3">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto23.jpg" alt="Proyecto Agrovoltaico 4" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     
@@ -855,26 +909,30 @@ Impactos.</p>
                 <div class="tiny-three-item">
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto5.jpg" alt="Proyecto Agrovoltaico 1">
-                           
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto5.jpg" alt="Consorcio Biomasa 1" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto20.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto20.jpg" alt="Consorcio Biomasa 2" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto24.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto24.jpg" alt="Consorcio Biomasa 3" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto25.jpg" alt="Proyecto Agrovoltaico 3">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto25.jpg" alt="Consorcio Biomasa 4" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     
@@ -895,26 +953,30 @@ Impactos.</p>
                 <div class="tiny-three-item">
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto9.jpg" alt="Proyecto Agrovoltaico 1">
-                           
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto9.jpg" alt="Mediería 1" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto11.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto11.jpg" alt="Mediería 2" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto12.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto12.jpg" alt="Mediería 3" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto28.jpg" alt="Proyecto Agrovoltaico 3">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto28.jpg" alt="Mediería 4" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     
@@ -935,32 +997,37 @@ Impactos.</p>
                 <div class="tiny-three-item">
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto13.jpg" alt="Proyecto Agrovoltaico 1">
-                           
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto13.jpg" alt="COMEX 1" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto15.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto15.jpg" alt="COMEX 2" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto2.jpg" alt="Proyecto Agrovoltaico 2">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto2.jpg" alt="COMEX 3" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto26.jpg" alt="Proyecto Agrovoltaico 3">
-                            
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto26.jpg" alt="COMEX 4" loading="lazy">
+                            </div>
                         </div>
                     </div>
                     <div class="tiny-slide px-2">
                         <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="assets/images/client/Foto27.jpg" alt="Proyecto Agrovoltaico 3">
-                          
+                            <div class="carousel-container">
+                                <img class="carousel-image" src="assets/images/client/Foto27.jpg" alt="COMEX 5" loading="lazy">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -981,25 +1048,33 @@ Impactos.</p>
     <div class="tiny-three-item">
         <div class="tiny-slide px-2">
             <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                <img class="w-full h-48 object-cover" src="assets/images/client/Foto6.jpg" alt="Planta Biomasa 1">
+                <div class="carousel-container">
+                    <img class="carousel-image" src="assets/images/client/Foto6.jpg" alt="Alianzas y Capacitación 1" loading="lazy">
+                </div>
             </div>
         </div>
         
         <div class="tiny-slide px-2">
             <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                <img class="w-full h-48 object-cover" src="assets/images/client/Foto14.jpg" alt="Planta Biomasa 2">
+                <div class="carousel-container">
+                    <img class="carousel-image" src="assets/images/client/Foto14.jpg" alt="Alianzas y Capacitación 2" loading="lazy">
+                </div>
             </div>
         </div>
 
         <div class="tiny-slide px-2">
             <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                <img class="w-full h-48 object-cover" src="assets/images/client/Foto18.jpg" alt="Planta Biomasa 3">
+                <div class="carousel-container">
+                    <img class="carousel-image" src="assets/images/client/Foto18.jpg" alt="Alianzas y Capacitación 3" loading="lazy">
+                </div>
             </div>
         </div>
         
         <div class="tiny-slide px-2">
             <div class="relative rounded-md shadow shadow-slate-200 dark:shadow-slate-700 bg-white dark:bg-slate-900 overflow-hidden">
-                <img class="w-full h-48 object-cover" src="assets/images/client/Foto29.jpg" alt="Planta Biomasa 4">
+                <div class="carousel-container">
+                    <img class="carousel-image" src="assets/images/client/Foto29.jpg" alt="Alianzas y Capacitación 4" loading="lazy">
+                </div>
             </div>
         </div>
     </div>

@@ -390,7 +390,7 @@ toastr.options = {
     "hideMethod": "fadeOut"
 };
 
-// Inicialización de Tiny Slider para múltiples carruseles
+// Inicialización de Tiny Slider para múltiples carruseles (optimizado para rendimiento)
 try {
   document.addEventListener('DOMContentLoaded', function () {
     const carruseles = document.querySelectorAll('.tiny-three-item');
@@ -405,15 +405,15 @@ try {
         rewind: false,
         autoplay: true,
         autoplayButtonOutput: false,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: false,
+        autoplayTimeout: 4000, // 🚀 Aumentado a 4 segundos para reducir transiciones frecuentes
+        autoplayHoverPause: true, // 🚀 Pausar en hover para mejorar UX y rendimiento
         nav: false,
         navPosition: "bottom",
         controlsText: [
           '<i class="mdi mdi-chevron-left"></i>',
           '<i class="mdi mdi-chevron-right"></i>'
         ],
-        speed: 800,
+        speed: 600, // 🚀 Reducido de 800ms a 600ms para transiciones más rápidas
         gutter: 12,
         responsive: {
           320: { items: 1 },
@@ -421,7 +421,16 @@ try {
           992: { items: 3 }
         },
         // 👉 Alterna la dirección: par = derecha, impar = izquierda
-        autoplayDirection: i % 2 === 0 ? 'forward' : 'backward'
+        autoplayDirection: i % 2 === 0 ? 'forward' : 'backward',
+        // 🚀 Optimizaciones de rendimiento
+        center: false, // Desactivar centrado para mejorar rendimiento
+        edgePadding: 0, // Sin padding adicional
+        fixedWidth: false, // Ancho flexible para mejor rendimiento
+        arrowKeys: false, // Deshabilitar navegación por teclado si no es necesaria
+        preventActionWhenRunning: true, // Prevenir acciones durante transiciones
+        preventScrollOnTouch: 'auto', // Optimizar para dispositivos táctiles
+        swipeAngle: 15, // Ángulo de deslizamiento más conservador
+        nested: false // Indicar que no hay carruseles anidados
       });
     });
   });
