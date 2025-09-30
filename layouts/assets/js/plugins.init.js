@@ -204,6 +204,27 @@ if (document.getElementsByClassName('tiny-two-item').length > 0) {
     });
 };
 
+// Carrusel móvil para banners (.tiny-one-item) visible solo en móviles
+if (document.getElementsByClassName('tiny-one-item').length > 0) {
+    var sliderOne = tns({
+        container: '.tiny-one-item',
+        items: 1,
+        controls: false,
+        mouseDrag: true,
+        loop: true,
+        rewind: false,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 3500,
+        nav: false,
+        speed: 500,
+        gutter: 8,
+        responsive: {
+            768: { items: 1 }
+        }
+    });
+}
+
 //=========================================//
 /*/*            05) Contact Form           */
 //=========================================//
