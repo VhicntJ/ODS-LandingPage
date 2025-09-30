@@ -361,13 +361,25 @@
 
     <!-- Start -->
     <section class="relative md:py-16 py-12" >
-        <div id="serv" class="container">
-            <!-- Header Section -->
-            <div class="grid grid-cols-1 pb-8 text-center">
-                <h6  class="text-orange-600 text-xxl font-medium uppercase mb-2">Nuestras Iniciativas</h6>
-                <h3 class="mb-4 md:text-3xl text-2xl font-medium dark:text-white">Cooperación, Innovación e Ingeniería para la Sostenibilidad y Regeneración Local</h3>
-                <p class="text-slate-600 dark:text-slate-300 max-w-4xl mx-auto text-lg">Somos un polo empresarial que agrupa a asociaciones empresariales, empresas cooperativas y empresas sociales. Trabajamos en conjunto a comunidades locales y a inversionistas de impacto, para crear las condiciones que permitan la sostenibilidad y la regeneración local.</p>
+        <div class="banner-marquee" aria-label="Carrusel de banners en movimiento">
+            <div class="marquee">
+    <!-- Pista 1 -->
+            <div class="marquee__track">
+                <a href="#"><img src="assets/images/banners/14th_amcco_conference_0.png" alt="Banner 1"></a>
+                <a href="#"><img src="assets/images/banners/AICOOP.jpg" alt="Banner 2"></a>
+                <a href="#"><img src="assets/images/banners/COP30.jpg" alt="Banner 3"></a>
+                <a href="#"><img src="assets/images/banners/screen_shot_2025-02-05_at_12.09.32.png" alt="Banner 4"></a>                
             </div>
+    <!-- Pista dplicada (para bucle perfecto) -->
+            <div class="marquee__track" aria-hidden="true">
+                <a href="#"><img src="assets/images/banners/14th_amcco_conference_0.png" alt=""></a>
+                <a href="#"><img src="assets/images/banners/AICOOP.jpg" alt=""></a>
+                <a href="#"><img src="assets/images/banners/COP30.jpg" alt=""></a>
+                <a href="#"><img src="assets/images/banners/screen_shot_2025-02-05_at_12.09.32.png" alt=""></a>
+                
+             </div>
+            </div>
+        </div>
 
             <!-- Stats Section - Layout 3x2 más compacto -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 mb-16" id="stats-section">

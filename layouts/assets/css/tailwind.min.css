@@ -3847,7 +3847,184 @@ html[dir="rtl"] .tns-visually-hidden {
   .lg\:leading-normal {
     line-height: 1.5 !important;
   }
-  
+ /* ===== Carrusel continuo para banners (CSS completo) ===== */
+/* Ajustes globales del carrusel */
+:root{
+  --marquee-speed: 45s;      /* + rápido: 30s | + lento: 60s */
+  --marquee-height: 200px;   /* alto del carrusel en desktop */
+  --marquee-gap: 24px;       /* separación entre banners */
+  --marquee-radius: 14px;    /* bordes del contenedor */
+  --marquee-bg: #0b0b0b;     /* color de fondo */
+}
+
+/* Contenedor principal */
+.banner-marquee{
+  position: relative;
+  overflow: hidden;
+  height: var(--marquee-height);
+  border-radius: var(--marquee-radius);
+  background: var(--marquee-bg);
+}
+
+/* Máscara suave en bordes (navegadores modernos) */
+@supports (mask-image: linear-gradient(#000, #000)){
+  .banner-marquee{
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+}
+
+/* Fallback de sombreado de bordes si no hay mask-image */
+.banner-marquee::before,
+.banner-marquee::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width:56px;
+  pointer-events:none;
+  z-index:2;
+}
+.banner-marquee::before{ left:0;  background: linear-gradient(to right, var(--marquee-bg), transparent); }
+.banner-marquee::after { right:0; background: linear-gradient(to left,  var(--marquee-bg), transparent); }
+
+/* Contenedor y pistas */
+.banner-marquee .marquee{
+  display: flex;
+  width: max-content; /* se ajusta al contenido total */
+  height: 100%;
+}
+
+.banner-marquee .marquee__track{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--marquee-gap);
+  padding-inline: var(--marquee-gap);
+  flex: 0 0 auto;  /* no permitir que flexbox deforme la pista */
+  animation: scroll-x var(--marquee-speed) linear infinite;
+  will-change: transform;
+}
+
+/* Pausa al pasar el mouse (opcional) */
+.banner-marquee:hover .marquee__track{
+  animation-play-state: paused;
+}
+
+/* Elementos de banner */
+.banner-marquee .marquee__track a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px; /* ancho mínimo por item en desktop */
+  text-decoration: none;
+}
+
+.banner-marquee .marquee__track img{
+  display: block;
+  height: calc(var(--marquee-height) - 18px); /* pequeño respiro interior */
+  width: auto;
+  object-fit: contain;     /* conserva proporción; usa cover si prefieres llenar */
+  border-radius: 10px;
+  background: #111;        /* en caso de espacio vacío */
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  transition: transform .25s ease;
+}
+
+.banner-marquee a:hover img{
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Animación continua */
+@keyframes scroll-x{
+  from{ transform: translate3d(0,0,0); }
+  to  { transform: translate3d(-100%,0,0); } /* desplaza el ancho de la pista 1 */
+}
+
+/* Accesibilidad (opcional). Si quieres movimiento SIEMPRE, comenta este bloque */
+
+
+/* ===== Responsivo ===== */
+@media (max-width: 1024px){
+  :root{ --marquee-height: 170px; --marquee-gap: 20px; }
+  .banner-marquee::before, .banner-marquee::after{ width: 44px; }
+}
+@media (max-width: 640px){
+  :root{ --marquee-height: 130px; --marquee-gap: 16px; }
+  .banner-marquee::before, .banner-marquee::after{ width: 36px; }
+  .banner-marquee .marquee__track a{ min-width: 200px; }
+}
+
+/* =========================================================
+   FIX MOVIL (anti-apilado y preserva dimensiones) — PONER AL FINAL
+   ========================================================= */
+.banner-marquee,
+.banner-marquee * {
+  box-sizing: border-box;
+}
+
+/* Fuerza fila continua y sin wraps incluso con Tailwind/prose/resets */
+.banner-marquee .marquee,
+.banner-marquee .marquee__track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+/* Cada item no debe expandirse a 100% */
+.banner-marquee .marquee__track > a,
+.banner-marquee .marquee__track > * {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important; /* prose suele agregar márgenes */
+  padding: 0 !important;
+}
+
+/* Restablecer dimensiones intrínsecas de imágenes en móvil */
+.banner-marquee .marquee__track img{
+  /* Limpia reglas heredadas como img{max-width:100%; width:100%} */
+  all: unset;
+  display: block;
+  height: var(--marquee-item-h, 140px); /* altura explícita en móvil */
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* En >=641px vuelve a usar la altura de desktop */
+@media (min-width: 641px){
+  .banner-marquee .marquee__track img{
+    height: calc(var(--marquee-height) - 18px);
+  }
+}
+
+/* Reafirma la animación en móvil */
+@media (max-width: 768px){
+  .banner-marquee .marquee__track{
+    animation: scroll-x var(--marquee-speed, 45s) linear infinite !important;
+    transform: translate3d(0,0,0);
+    will-change: transform;
+  }
+}
+
+/* Neutraliza estilos de contenedores problemáticos cercanos */
+.banner-marquee .prose a,
+.banner-marquee .prose img{
+  display: inline !important;
+  margin: 0 !important;
+}
+
+/* Si el padre tenía grid/flex-col, el carrusel se mantiene estable dentro */
+.banner-marquee{ display: block; width: 100%; }
+
+
 }
 
 /* Colores personalizados para ODS */
