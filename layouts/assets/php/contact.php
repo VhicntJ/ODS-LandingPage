@@ -54,14 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.titan.email'; // Servidor SMTP
         $mail->SMTPAuth = true;
         $mail->Username = 'vinculacion@odscero.cl'; // Tu correo SMTP
-        $mail->Password = 'Yi#wCC7[vs2cigS'; // Contraseña SMTP
+        $mail->Password = 'Mvupemq100v*'; // Contraseña SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encriptación TLS
         $mail->Port = 587; // Puerto SMTP  
 
         // Configuración del correo
         $mail->setFrom("vinculacion@odscero.cl", "Formulario de contacto"); // Remitente
         $mail->addAddress('vinculacion@odscero.cl', 'Destinatario'); // Destinatario principal
-        $mail->addAddress('vhicntjulio@gmail.com', 'Copia'); // Destinatario principal
         $mail->addReplyTo($email, $name); // Responder al remitente
 
         // Fecha y hora de la solicitud
