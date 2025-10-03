@@ -57,6 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password = 'Mvupemq100v*'; // Contraseña SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Encriptación TLS
         $mail->Port = 587; // Puerto SMTP  
+        $mail = new PHPMailer(true);
+        $mail->SMTPDebug = 2; // 0 = nada, 1 = errores y mensajes, 2 = más detalle
+        $mail->Debugoutput = 'html'; // salida legible en navegador
 
         // Configuración del correo
         $mail->setFrom("vinculacion@odscero.cl", "Formulario de contacto"); // Remitente
